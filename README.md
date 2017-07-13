@@ -1,10 +1,12 @@
 # free-geek
 
-Code and documentation for Good Hackathon for Free Geek
+Source code and documentation for the "Code for Good" Conference (hackathon) for Free Geek
 
 ## Getting Started
 
-Check out [the docs](../docs). Also we abide by the Free Geek volunteer Code of Conduct to make sure you review it [here](../docs/Free_Geek_General_Conduct_guidelines.pdf)
+Check out [the docs](../docs) where we keep a copy of the [feature requests](../docs/Code For Good project.odt) from Free Geek staff.
+
+Also, we abide by the Free Geek volunteer Code of Conduct to make sure you review it [here](../docs/Free_Geek_General_Conduct_guidelines.pdf)
 
 
 ## Installation
