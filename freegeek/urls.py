@@ -15,7 +15,28 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
+import django.contrib.auth.views
+from diary import urls as diary_urls
+
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-]
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/login/$', django.contrib.auth.views.login),
+    url(r'^accounts/logout/$',
+        django.contrib.auth.views.logout,
+        {'next_page': '/'}),
+    url(r'^accounts/password/reset/$',
+        django.contrib.auth.views.password_reset,
+        {'post_reset_redirect': '/accounts/password/reset/done/'},
+        name="password_reset"),
+    url(r'^accounts/password/reset/done/$',
+        django.contrib.auth.views.password_reset_done),
+    url(r'^accounts/password/reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+        django.contrib.auth.views.password_reset_confirm,
+        {'post_reset_redirect': '/accounts/password/done/'},
+        name='password_reset_confirm'),
+    url(r'^accounts/password/done/$',
+        django.contrib.auth.views.password_reset_complete),
+    url(r'^diary/', include(diary_urls.urlpatterns, namespace='diary')),
+    ]
