@@ -11,22 +11,33 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import random
+import string
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from .local_settings import SECRET_KEY, DATABASES, DEBUG
+assert(DEBUG or True)
+assert(len(DATABASES))
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+def random_str(n=50):
+    chars = ''.join([string.ascii_letters, string.digits, string.punctuation]
+                    ).replace('\'', '').replace('"', '').replace('\\', '')
+    return ''.join([random.SystemRandom().choice(chars) for i in range(n)])
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p5(zjx!bsferesu^^g2gvivj0lhy6s(=x*z=k!7r3tsgqslp)o'
+SECRET_KEY = SECRET_KEY or os.getenv('DJANGO_SECRET_KEY')
+if not SECRET_KEY:
+    # need to store the new key somehwere that the other gunicorn instances can find it too!
+    os.environ["DJANGO_SECRET_KEY"] = random_str()
+    SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['totalgood.org', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -37,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'freegeek',
 ]
 
 MIDDLEWARE = [
@@ -45,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -63,6 +77,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            #'debug': DEBUG,
         },
     },
 ]
