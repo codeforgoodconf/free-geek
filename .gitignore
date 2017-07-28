@@ -43,3 +43,4 @@ MANIFEST
 
 # secrets
 local_settings.py
+*.sql
