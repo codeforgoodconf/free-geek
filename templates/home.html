@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
+{% load staticfiles %}
+
 {% block title %} Free Geek {% endblock %}
 
 {% block content %}
-    Free Geek Landing Page
+  Free Geek Landing Page
+    <img src="{% static 'fglogo.png' %}" alt="free geek logo">
 {% endblock %}
