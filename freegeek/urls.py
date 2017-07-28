@@ -20,11 +20,8 @@ from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 import django.contrib.auth.views
 from diary import urls as diary_urls
-<<<<<<< HEAD
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-=======
->>>>>>> 6af76be395a4294be744b12d725b8220e1dccf36
 from . import views
 
 
