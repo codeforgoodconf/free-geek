@@ -2,4 +2,4 @@
 Developers
 ==========
 
-* Hobson Lane <github@totalgood.com>
+* Hobson Lane (data wrangler and git untangler) <github@totalgood.com>
