@@ -16,10 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
-import django.contrib.auth.views
-from diary import urls as diary_urls
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+import django.contrib.auth.views
+from diary import urls as diary_urls
+<<<<<<< HEAD
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
+=======
+>>>>>>> 6af76be395a4294be744b12d725b8220e1dccf36
 from . import views
 
 
@@ -35,7 +40,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
-
 
 urlpatterns = [
     url(r'^$', views.home),
