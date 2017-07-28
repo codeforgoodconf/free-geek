@@ -58,4 +58,5 @@ urlpatterns = [
     url(r'^accounts/password/done/$',
         django.contrib.auth.views.password_reset_complete),
     url(r'^diary/', include(diary_urls.urlpatterns, namespace='diary')),
+    url(r'^diary/?', views.diary, name="diary_home")
     ]
