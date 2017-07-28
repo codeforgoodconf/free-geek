@@ -12,6 +12,10 @@ __pycache__/*
 .*.swp
 */.ipynb_checkpoints/*
 \#*
+<<<<<<< HEAD
+=======
+.~*
+>>>>>>> a778c35359c28d7b7196ab7b280653ced6a16f7f
 
 # Project files
 .ropeproject
@@ -46,3 +50,6 @@ MANIFEST
 # secrets
 local_settings.py
 *.sql
+.~*
+~*
+
