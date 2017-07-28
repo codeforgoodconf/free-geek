@@ -1,19 +1,32 @@
-========
-freegeek
-========
+free-geek
+=========
 
+Source code and documentation for the "Code for Good" Conference
+(hackathon) for Free Geek
 
-Add a short description here!
+Getting Started
+---------------
 
+Check out `the docs <../docs>`__ where we keep a copy of the `feature
+requests <../docs/Code%20For%20Good%20project.odt>`__ from Free Geek
+staff.
 
-Description
-===========
+Also, we abide by the Free Geek volunteer Code of Conduct to make sure
+you review it
+`here <../docs/Free_Geek_General_Conduct_guidelines.pdf>`__
 
-A longer description of your project goes here...
+Installation
+------------
 
+.. code:: shell
 
-Note
-====
+    $ pip install geeksched
 
-This project has been set up using PyScaffold 2.5.7. For details and usage
-information on PyScaffold see http://pyscaffold.readthedocs.org/.
+Contributing
+------------
+
+.. code:: shell
+
+    $ git clone https://github.com/codeforgoodconf/freegeek.git
+    $ mkvirtualenv freegeek
+    $ pip install -e freegeek/
