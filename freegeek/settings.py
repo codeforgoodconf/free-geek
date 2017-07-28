@@ -20,7 +20,6 @@ assert(len(DATABASES))
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 def random_str(n=50):
     chars = ''.join([string.ascii_letters, string.digits, string.punctuation]
                     ).replace('\'', '').replace('"', '').replace('\\', '')
@@ -146,3 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]

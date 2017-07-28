@@ -1,0 +1,19 @@
+{% load static from static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <title>{% block title %} Free Geek {% endblock %}</title>
+</head>
+<body>
+  <div id="nav">
+      <ul>
+          <li>Home</li>
+          <li>Calendar </li>
+      </ul>
+  </div>
+  {%  block content %}
+  {%  endblock %}
+</body>
+</html>

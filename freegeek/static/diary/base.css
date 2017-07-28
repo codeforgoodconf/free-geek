@@ -1,0 +1,144 @@
+/* css for diary page(s) */
+
+.current {
+    background-color: #f57900 !important;
+}
+
+.hasentry {
+    font-weight: bold;
+}
+
+.weeks {
+    width: 100%;
+    table-layout: auto;
+    whitespace: nowrap;
+}
+
+.weeks th {
+    font-weight: normal;
+}
+
+.day {
+    vertical-align: top;
+    font-style: italic;
+    padding: 2px;
+}
+
+.day.regular {
+    font-style: normal !important;
+    height: 85px;
+}
+
+.day.regular:hover {
+    background-color; #c4a000;
+}
+
+.right {
+    float: right;
+}
+
+.new {
+    padding: 0;
+    color: #222222;
+}
+.new[disabled] {
+    color: #eeeeee;
+}
+
+.entry {
+    font-style: bold;
+    font-size: small;
+    color: #000000;
+}
+
+.statistics {
+    font-style: bold;
+    font-size: small;
+    color: #000000;
+}
+
+/* admin and trading are opposites. historic is the same as trading but in the 
+past */
+.admin {
+    background-color: #999999;
+}
+.trading {
+}
+.historic {
+    background-color: #bbbbbb;
+}
+.advance {
+    background-color: #dddddd;
+}
+
+/* highlight cancelled (admin only) or no_show entries */
+.cancelled {
+    background-color: #ff0000 !important;
+    color: #00ff00 !important;
+}
+.no_show {
+    background-color: #00ff00 !important;
+    color: #ff0000 !important;
+    text-decoration: underline !important;
+}
+
+/* kludgy workaround for silly date in the TimeWidget popout header */
+.datetimepicker-hours th {
+    visibility: hidden !important;
+}
+.datetimepicker-minutes th {
+    visibility: hidden !important;
+}
+
+
+/* drag and drop styling for multi_day and day templates */
+
+.droptarget {
+    height: 25px;
+    outline: 1px solid #eeeeee;
+    outline-offset: -1px;
+}
+
+.dragover {
+    outline: 2px solid #ff0000;
+}
+
+div.entry {
+    float: left;
+    display: inline;
+    padding-right: 10px;
+}
+
+/* http://www.html5rocks.com/en/tutorials/dnd/basics/ */
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+    cursor: move; /* alter cursor shape as a visual cue */
+}
+.dragover [draggable] {
+    background: #ff8800;
+    border: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* forms styling */
+
+.errorlist {
+    color: red;
+    font-weight: bold;
+}
+
+.diarybutton {
+    display: inline;
+    float: right;
+}
+

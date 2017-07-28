@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
-import django.contrib.auth.views
-from diary import urls as diary_urls
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+import django.contrib.auth.views
+from diary import urls as diary_urls
+from . import views
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -35,8 +36,8 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 
-
 urlpatterns = [
+    url(r'^$', views.home),
     url(r'^api/?', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
