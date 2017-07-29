@@ -64,8 +64,20 @@ class Staff(UserManager):
 class Profile(User):
     """ Profile details.
 
+    Attributes:
+       Proficiency level
+       IsVolunteer (bool)
+       IsIntern (bool)
+       IsTeacher (bool)
+
     Profile can (un)schedule self for appointment.
+    
+    Need to be able to see all scheduled appointments for the profile.
     """
+
+    IsVolunteer = True
+    IsIntern = False
+    IsTeacher = False
 
     #proficiency options
     LEVEL1 = 'L1'
@@ -192,6 +204,7 @@ class Appointment(models.Model):
        proficiency (str)
        station (ForeignKey(Station))
        filled
+       profile
     """
     start_time = models.DateTimeField('start_time')
     end_time = models.DateTimeField('end_time')
@@ -243,23 +256,51 @@ def create_appointment(start_time, end_time, station, proficiency):
         end_time=end_time,
         station=station,
         proficiency=proficiency,
-        filled=false,
+        filled=False,
+        profile=none,
         )
     
-    # how do I point to the database? the UserManager has "self._db", 
-    # but how do I access the database from outside?
-    appointment.save(using=self._db)
+    appointment.save()
     return appointment
 
 
-def assign_user_to_appointment(user,appointment):
-    """Assign a user to an appointment.
+# This could be a member function of Appointment instead
+def assign_profile_to_appointment(profile,appointment):
+    """Assign a profile to an appointment.
     
-    Need to check that user has the correct proficiency level.
+    Need to check that appointment is not already filled.
+    Need to check that profile has the correct proficiency level.
     """
-    #check that user has correct proficiency level
-    #if not, raise exception (?)
 
-    appointment.filled=true
-    return true
+    if(appointment.filled):
+        raise ValidationError(
+            'Appointment is already filled.'
+            )
+    if(appointment.proficiency!=profile.proficiency):
+        raise ValidationError(
+            'Profile does not have appropriate proficiency level.'
+            )
+
+    appointment.filled=True
+    appointment.profile=profile
+    appointment.save()
+    return True
+
+
+# This could be a member function of Appointment instead
+def unassign_profile_to_appointment(profile,appointment):
+    """Unassign a profile from an appointment.
+    
+    Need to check that appointment is filled.
+    """
+    
+    if(not appointment.filled):
+        raise ValidationError(
+            'Appointment is not yet filled.'
+            )
+
+    appointment.filled=False
+    appointment.profile=None
+    appointment.save()
+    return True
 
