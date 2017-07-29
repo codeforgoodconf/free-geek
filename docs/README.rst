@@ -30,3 +30,10 @@ Contributing
     $ git clone https://github.com/codeforgoodconf/freegeek.git
     $ mkvirtualenv freegeek
     $ pip install -e freegeek/
+
+Documentation
+-------------
+
+The project documentation is auto-rendered from the `github
+repository <https://github.com/codeforgoodconf/free-geek>`__ to `read
+the docs <https://readthedocs.org/projects/free-geek/>`__.
