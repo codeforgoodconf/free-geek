@@ -16,12 +16,25 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
+from django.contrib.auth.models import User
+from rest_framework import routers
 import django.contrib.auth.views
 from diary import urls as diary_urls
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
+from . import views
 
+router = routers.DefaultRouter()
+router.register(r'customers', views.CustomerViewSet, base_name='customers')
+router.register(r'resources', views.ResourceViewSet, base_name='resources')
+router.register(r'treatments', views.TreatmentViewSet, base_name='treatments')
+router.register(r'entries', views.EntryViewSet, base_name='entries')
 
 urlpatterns = [
+    url(r'^$', views.home),
+    url(r'^api/', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^accounts/login/$', django.contrib.auth.views.login),
     url(r'^accounts/logout/$',
         django.contrib.auth.views.logout,
@@ -39,4 +52,5 @@ urlpatterns = [
     url(r'^accounts/password/done/$',
         django.contrib.auth.views.password_reset_complete),
     url(r'^diary/', include(diary_urls.urlpatterns, namespace='diary')),
+    url(r'^diary/?', views.diary, name="diary_home")
     ]

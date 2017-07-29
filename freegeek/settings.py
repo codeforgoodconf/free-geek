@@ -14,12 +14,12 @@ import os
 import random
 import string
 
-from .local_settings import SECRET_KEY, DATABASES, DEBUG
-assert(DEBUG or True)
-assert(len(DATABASES))
+try:
+    from .local_settings import SECRET_KEY, DATABASES, DEBUG
+except ImportError:
+    SECRET_KEY, DATABASES, DEBUG = None, None, None
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 def random_str(n=50):
     chars = ''.join([string.ascii_letters, string.digits, string.punctuation]
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
-
+    'rest_framework',
     'freegeek',
     'diary',
     'datetimewidget',
@@ -96,13 +96,22 @@ WSGI_APPLICATION = 'freegeek.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DATABASES is None:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        },
+        # Postgres connection
+        # 'postgres': {
+        #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #     'NAME': 'freegeek',
+        #     'HOST': 'localhost',
+        #     'PORT': '5432',
+        #     'USER': 'freegeek',
+        #     'PASSWORD': 'freegeek',
+        # },
     }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -122,6 +131,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ],
+
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -141,3 +156,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
