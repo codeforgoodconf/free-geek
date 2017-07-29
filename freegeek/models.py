@@ -16,27 +16,24 @@ phoneValidator = RegexValidator(
     message='Not a valid phone number')
 
 
-class Staff(UserManager)
-
+class Staff(UserManager):
     """ Staff details.
 
-    Staff can add Volunteers.
-    Staff can turn Volunteers into Interns.
-    Staff can add Teachers.
-    Staff can turn Volunteers and Interns into Teachers.
+    Staff can add and modify Profiles
     """
-
+    
     def get_by_natural_key(self, username):
         """                                                                                                                                                              
         Enable serialisation without pk. Not needed ATM.                                                                                                                 
         """
-    return self.get(username=username)
+        return self.get(username=username)
 
 
     def create_user(self,
         username,
         first_name,
         last_name,
+        proficiency,
         email,
         phone,
         date_of_birth,
@@ -55,6 +52,7 @@ class Staff(UserManager)
             phone=phone,
             date_of_birth=date_of_birth,
             gender=gender,
+            proficiency=proficiency,
             notes=notes,
         )
 
@@ -63,11 +61,21 @@ class Staff(UserManager)
         return user
 
 
-class Volunteer(User):
-    """ Volunteer details.
+class Profile(User):
+    """ Profile details.
 
-    Volunteer can (un)schedule self for appointment.
+    Profile can (un)schedule self for appointment.
     """
+
+    #proficiency options
+    LEVEL1 = 'L1'
+    LEVEL2 = 'L2'
+    LEVEL3 = 'L3'
+    LEVEL_CHOICES = (
+        (LEVEL1, 'Level 1'),
+        (LEVEL2, 'Level 2'),
+        (LEVEL3, 'Level 3'),
+    )
 
     # gender options                                                                                                                                                     
     MALE = 'M'
@@ -76,7 +84,7 @@ class Volunteer(User):
     GENDER_CHOICES = (
         (MALE, 'Male'),
         (FEMALE, 'Female'),
-        (Other, 'Other'),
+        (OTHER, 'Other'),
     )
 
     # title options
@@ -102,8 +110,8 @@ class Volunteer(User):
     )
 
     class Meta(User.Meta):
-        verbose_name = 'Volunteer'
-        verbose_name_plural = 'Volunteers'
+        verbose_name = 'Profile'
+        verbose_name_plural = 'Profiles'
         
     objects = Staff()
 
@@ -122,6 +130,11 @@ class Volunteer(User):
         max_length=1,
         choices=GENDER_CHOICES,
         default=FEMALE,
+    )
+    proficiency = models.CharField(
+        max_length=40,
+        choices=PROFICIENCY_CHOICES,
+        default=LEVEL1,
     )
     notes = models.TextField(blank=True)
 
@@ -148,52 +161,27 @@ class Volunteer(User):
 
 
 
-class Intern(Volunteer):
-    """Intern details.
-
-    Intern is a Volunteer with additional priveleges:
-    Intern can (un)schedule Volunteers in own Crew for appointment.
-    """
-
-    class Meta(User.Meta):
-        verbose_name = 'Intern'
-        verbose_name_plural = 'Interns'
-
-
-
-class Teacher(Volunteer):
-    """Teacher details.
-
-    Teacher is a Volunteer with additional priveleges:
-    Teacher can (un)schedule Volunteers in any Crew for appointment.
-    """
-
-    class Meta(User.Meta):
-        verbose_name = 'Volunteer'
-        verbose_name_plural = 'Volunteers'
-
-
-
-
-class Building(models.Model):
-    """Building model.
+class Location(models.Model):
+    """Location model.
     
     (There are multiple FreeGeek locations.)
     """
-    building_name = models.CharField(max_length=200)
+    location_name = models.CharField(max_length=200)
     def __str__(self):
-        return self.building_name
+        return self.location_name
+
 
 class Station(models.Model):
     """Station model.
     
     Has a station_name.
-    Associated with a Building. (Where the Station is located.)
+    Associated with a Location. (Where the Station is located.)
     """
     station_name = models.CharField(max_length=200)
-    building = models.ForeignKey(Building, on_delete=models.CASCADE)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
     def __str__(self):
         return self.station_name
+
 
 class Appointment(models.Model):
     """Appointment model.
@@ -201,22 +189,37 @@ class Appointment(models.Model):
     Attributes:
        start_time (DateTimeField)
        end_time (DateTimeField)
+       proficiency (str)
        station (ForeignKey(Station))
-
-    It needs "slots" which have proficiency requirements, 
-    and each slot can be open or filled.
-    (Do we need a "slot" model?)
     """
     start_time = models.DateTimeField('start_time')
     end_time = models.DateTimeField('end_time')
+
+    #proficiency options
+    LEVEL1 = 'L1'
+    LEVEL2 = 'L2'
+    LEVEL3 = 'L3'
+    LEVEL_CHOICES = (
+        (LEVEL1, 'Level 1'),
+        (LEVEL2, 'Level 2'),
+        (LEVEL3, 'Level 3'),
+    )
+
+    proficiency = models.CharField(
+        max_length=40,
+        choices=PROFICIENCY_CHOICES,
+        default=LEVEL1,
+    )
+
     station = models.ForeignKey(Station, on_delete=models.CASCADE)
+
     def __str__(self):
         """Recast Appointment as string which gives a summary of the Appointment.
-        This includes start_time, end_time, station, and location.
-        This should eventually include a summary of open and filled slots.
+        This includes start_time, end_time, station, location, and proficiency.
         """
-        appointment_string = ("Appointment: %s to %s at %s in %s" % 
+        appointment_string = ("Appointment: %s to %s at %s in %s requires %s" % 
                               (str(self.start_time), str(self.end_time), 
-                               str(self.station), str(self.station.building)))
+                               str(self.station), str(self.station.location),
+                               proficiency))
         return appointment_string
 
