@@ -228,16 +228,15 @@ class Appointment(models.Model):
 
     station = models.ForeignKey(Station, on_delete=models.CASCADE)
 
+    # Do not check here whether they have same Station
+    # This can be done separately (e.g. when iterating through all appointments)
     def __eq__(self,other):
-        """Determine if the entries are 'eqivalent' 
-        (not necessarily mathematically equal).
+        """Determine if Appointments overlap
         NOTE: time period end time is non-inclusive.     
         """
-        if (self.station != other.station):
+        if (self.end_time <= other.start_time):
             return False
-        if (self.start_time < other.start_time and self.end_time <= other.end_time):
-            return False
-        if (self.start_time > other.start_time and self.end_time >= other.end_time):
+        if (self.start_time >= other.end_time):
             return False
         return True
 
@@ -269,6 +268,9 @@ def create_appointment(start_time, end_time, station, proficiency):
         raise ValueError('Appointment must have a station.')
     if not proficiency:
         raise ValueError('Appointment must have a proficiency.')
+
+    if(start_time>end_time):
+        raise ValidationError('Start time must come before end time.')
     
     appointment = self.model(
         start_time=start_time,
