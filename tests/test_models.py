@@ -17,9 +17,19 @@ class AppointmentTestCase(TestCase):
 
 class StationTestCase(TestCase):
     def setup(self):
-        Station.objects.create()
+        Station.objects.create(station_name = 'data destruction', location_name = 'Location A')
+
+    def test_station_str(self):
+        data_destruction = Station.objects.get(station_name = 'data destruction', location_name = 'Location A')
+        self.assertEqual(data_destruction.__str__(), 'data destruction')
 
 
 class LocationTestCase(TestCase):
     def setup(self):
-        Location.objects.create()
+        Location.objects.create(location_name = 'Location B')
+
+    def test_location_str(self):
+        location_b = Location.objects.get(location_name = 'Location B')
+        self.assertEqual(location_b.__str__(), 'Location B')
+
+
