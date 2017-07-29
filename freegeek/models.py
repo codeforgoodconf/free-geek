@@ -228,6 +228,17 @@ class Appointment(models.Model):
 
     station = models.ForeignKey(Station, on_delete=models.CASCADE)
 
+    def __eq__(self,other):
+        """Determine if the entries are 'eqivalent' 
+        (not necessarily mathematically equal).
+        NOTE: time period end time is non-inclusive.     
+        """
+        if (self.start_time < other.start_time and self.end_time <= other.end_time):
+            return False
+        if (self.start_time > other.start_time and self.end_time >= other.end_time):
+            return False
+        return True
+
     def __str__(self):
         """Recast Appointment as string which gives a summary of the Appointment.
         This includes start_time, end_time, station, location, and proficiency.
