@@ -229,32 +229,32 @@ class Appointment(models.Model):
 def create_appointment(start_time, end_time, station, proficiency):
     """Create an appointment
     """
-        if not start_time:
-            raise ValueError('Appointment must have a start_time.')
-        if not end_time:
-            raise ValueError('Appointment must have an end_time.')
-        if not station:
-            raise ValueError('Appointment must have a station.')
-        if not proficiency:
-            raise ValueError('Appointment must have a proficiency.')
-
-        appointment = self.model(
-            start_time=start_time,
-            end_time=end_time,
-            station=station,
-            proficiency=proficiency,
-            filled=false,
+    if not start_time:
+        raise ValueError('Appointment must have a start_time.')
+    if not end_time:
+        raise ValueError('Appointment must have an end_time.')
+    if not station:
+        raise ValueError('Appointment must have a station.')
+    if not proficiency:
+        raise ValueError('Appointment must have a proficiency.')
+    
+    appointment = self.model(
+        start_time=start_time,
+        end_time=end_time,
+        station=station,
+        proficiency=proficiency,
+        filled=false,
         )
-
-        # how do I point to the database? the UserManager has "self._db", 
-        # but how do I access the database from outside?
-        appointment.save(using=self._db)
-        return appointment
+    
+    # how do I point to the database? the UserManager has "self._db", 
+    # but how do I access the database from outside?
+    appointment.save(using=self._db)
+    return appointment
 
 
 def assign_user_to_appointment(user,appointment):
     """Assign a user to an appointment.
-
+    
     Need to check that user has the correct proficiency level.
     """
     #check that user has correct proficiency level
