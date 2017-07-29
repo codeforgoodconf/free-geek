@@ -246,7 +246,8 @@ def create_appointment(start_time, end_time, station, proficiency):
             filled=false,
         )
 
-        # how do I point to the database? the UserManager has "self._db", but how do I access the database from outside?
+        # how do I point to the database? the UserManager has "self._db", 
+        # but how do I access the database from outside?
         appointment.save(using=self._db)
         return appointment
 
