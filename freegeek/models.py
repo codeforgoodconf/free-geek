@@ -241,6 +241,12 @@ class Appointment(models.Model):
 
 def create_appointment(start_time, end_time, station, proficiency):
     """Create an appointment
+
+    Would be nice to check whether the appointment is at the same time as other 
+    appointments, and confirm whether overlapping appointments are intentional.
+
+    Creating multiple appointments with a single action would be nice, but 
+    that will probably be taken care of in views.
     """
     if not start_time:
         raise ValueError('Appointment must have a start_time.')
