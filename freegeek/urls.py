@@ -17,30 +17,22 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from django.contrib.auth.models import User
-from rest_framework import routers, serializers, viewsets
+from rest_framework import routers
 import django.contrib.auth.views
 from diary import urls as diary_urls
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from . import views
 
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ('url', 'username', 'email', 'is_staff')
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
+router.register(r'customers', views.CustomerViewSet, base_name='customers')
+router.register(r'resources', views.ResourceViewSet, base_name='resources')
+router.register(r'treatments', views.TreatmentViewSet, base_name='treatments')
+router.register(r'entries', views.EntryViewSet, base_name='entries')
 
 urlpatterns = [
     url(r'^$', views.home),
-    url(r'^api/?', include(router.urls)),
+    url(r'^api/', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^accounts/login/$', django.contrib.auth.views.login),
