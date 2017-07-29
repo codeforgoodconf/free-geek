@@ -14,9 +14,10 @@ import os
 import random
 import string
 
-from .local_settings import SECRET_KEY, DATABASES, DEBUG
-assert(DEBUG or True)
-assert(len(DATABASES))
+try:
+    from .local_settings import SECRET_KEY, DATABASES, DEBUG
+except ImportError:
+    SECRET_KEY, DATABASES, DEBUG = None, None, None
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -94,12 +95,13 @@ WSGI_APPLICATION = 'freegeek.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DATABASES is None:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
 
 
 # Password validation
