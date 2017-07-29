@@ -72,12 +72,16 @@ class Volunteer(User):
     # gender options                                                                                                                                                     
     MALE = 'M'
     FEMALE = 'F'
+    OTHER = 'O'
     GENDER_CHOICES = (
         (MALE, 'Male'),
         (FEMALE, 'Female'),
+        (Other, 'Other'),
     )
 
-    # title options                                                                                                                                                      
+    # title options
+    # MAKE SURE TO HANDLE THE "NONE" OPTION FOR OUTPUT CORRECTLY.
+                                                                                                                                                      
     MR = 'MR'
     MRS = 'MRS'
     MISS = 'MISS'
@@ -85,6 +89,7 @@ class Volunteer(User):
     DR = 'DR'
     PROF = 'PROF'
     REV = 'REV'
+    NOTITLE = 'NONE'
     TITLE_CHOICES = (
         (MR, 'Mr'),
         (MRS, 'Mrs'),
@@ -93,6 +98,7 @@ class Volunteer(User):
         (DR, 'Dr'),
         (PROF, 'Prof'),
         (REV, 'Rev'),
+        (NOTITLE, 'None'),
     )
 
     class Meta(User.Meta):
