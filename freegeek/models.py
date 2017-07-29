@@ -133,7 +133,7 @@ class Profile(User):
     )
     proficiency = models.CharField(
         max_length=40,
-        choices=PROFICIENCY_CHOICES,
+        choices=LEVEL_CHOICES,
         default=LEVEL1,
     )
     notes = models.TextField(blank=True)
@@ -191,9 +191,11 @@ class Appointment(models.Model):
        end_time (DateTimeField)
        proficiency (str)
        station (ForeignKey(Station))
+       filled
     """
     start_time = models.DateTimeField('start_time')
     end_time = models.DateTimeField('end_time')
+    filled = models.BooleanField('filled')
 
     #proficiency options
     LEVEL1 = 'L1'
@@ -207,7 +209,7 @@ class Appointment(models.Model):
 
     proficiency = models.CharField(
         max_length=40,
-        choices=PROFICIENCY_CHOICES,
+        choices=LEVEL_CHOICES,
         default=LEVEL1,
     )
 
@@ -222,4 +224,41 @@ class Appointment(models.Model):
                                str(self.station), str(self.station.location),
                                proficiency))
         return appointment_string
+
+
+def create_appointment(start_time, end_time, station, proficiency):
+    """Create an appointment
+    """
+        if not start_time:
+            raise ValueError('Appointment must have a start_time.')
+        if not end_time:
+            raise ValueError('Appointment must have an end_time.')
+        if not station:
+            raise ValueError('Appointment must have a station.')
+        if not proficiency:
+            raise ValueError('Appointment must have a proficiency.')
+
+        appointment = self.model(
+            start_time=start_time,
+            end_time=end_time,
+            station=station,
+            proficiency=proficiency,
+            filled=false,
+        )
+
+        # how do I point to the database? the UserManager has "self._db", but how do I access the database from outside?
+        appointment.save(using=self._db)
+        return appointment
+
+
+def assign_user_to_appointment(user,appointment):
+    """Assign a user to an appointment.
+
+    Need to check that user has the correct proficiency level.
+    """
+    #check that user has correct proficiency level
+    #if not, raise exception (?)
+
+    appointment.filled=true
+    return true
 
