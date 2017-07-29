@@ -233,6 +233,8 @@ class Appointment(models.Model):
         (not necessarily mathematically equal).
         NOTE: time period end time is non-inclusive.     
         """
+        if (self.station != other.station):
+            return False
         if (self.start_time < other.start_time and self.end_time <= other.end_time):
             return False
         if (self.start_time > other.start_time and self.end_time >= other.end_time):
