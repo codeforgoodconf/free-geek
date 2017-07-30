@@ -178,9 +178,9 @@ class Location(models.Model):
     
     (There are multiple FreeGeek locations.)
     """
-    location_name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     def __str__(self):
-        return self.location_name
+        return self.name
 
 
 class Station(models.Model):
@@ -189,10 +189,10 @@ class Station(models.Model):
     Has a station_name.
     Associated with a Location. (Where the Station is located.)
     """
-    station_name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     def __str__(self):
-        return self.station_name
+        return self.name
 
 
 class Appointment(models.Model):
@@ -209,6 +209,8 @@ class Appointment(models.Model):
     start_time = models.DateTimeField('start_time')
     end_time = models.DateTimeField('end_time')
     filled = models.BooleanField('filled')
+    # NOT SURE THIS IS THE RIGHT WAY TO HANDLE THE PROFILE ASSIGNED TO THE APPOINTMENT
+    profile = models.ForeignKey(Profile, on_delete=models.PROTECT, blank=True, null=True)
 
     #proficiency options
     LEVEL1 = 'L1'
@@ -244,10 +246,13 @@ class Appointment(models.Model):
         """Recast Appointment as string which gives a summary of the Appointment.
         This includes start_time, end_time, station, location, and proficiency.
         """
-        appointment_string = ("Appointment: %s to %s at %s in %s requires %s" % 
+        filled_string = 'unfilled'
+        if self.filled:
+            filled_string = 'filled'
+        appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." % 
                               (str(self.start_time), str(self.end_time), 
                                str(self.station), str(self.station.location),
-                               proficiency))
+                               self.proficiency, filled_string))
         return appointment_string
 
 
@@ -278,7 +283,7 @@ def create_appointment(start_time, end_time, station, proficiency):
         station=station,
         proficiency=proficiency,
         filled=False,
-        profile=none,
+        profile=None,
         )
     
     appointment.save()
