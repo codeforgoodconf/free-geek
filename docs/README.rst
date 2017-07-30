@@ -59,6 +59,13 @@ These commands:
 Pandoc is required to convert the files.
 `Installation <http://pandoc.org/installing.html>`__ is OS dependent.
 
+Testing
+-------
+
+.. code:: shell
+
+        pip install -r test-requirements.txt
+
 Adding flake8 into a pre-commit hook
 ------------------------------------
 

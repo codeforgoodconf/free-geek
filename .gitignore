@@ -51,7 +51,6 @@ local_settings.py
 *.sql
 .~*
 ~*
-
 # development db tables
 *.sqlite
 

@@ -43,6 +43,11 @@ These commands:
 
 Pandoc is required to convert the files. [Installation](http://pandoc.org/installing.html) is OS dependent.
 
+## Testing 
+
+```shell
+    pip install -r test-requirements.txt
+```
 ## Adding flake8 into a pre-commit hook
 
 1. Open the hidden `.git` folder inside free-geek folder
@@ -63,5 +68,3 @@ exit 0
 Commits must be executed in the terminal, not GUI. 
 
 Now before every commit flake8 will run and display the output into terminal window. It will not prevent the commit. 
-
-
