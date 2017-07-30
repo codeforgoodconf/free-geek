@@ -17,12 +17,9 @@ phoneValidator = RegexValidator(
 
 # from models_old import *
 
-class StaffManager(UserManager):
-    """ Staff details.
-
-    Staff can add and modify Profiles
-    """
-
+class ProfileManager(UserManager):
+    """ only users with the staff level can add and modify Profiles """
+    
     def get_by_natural_key(self, username):
         """
         Enable serialisation without pk. Not needed ATM.
@@ -47,17 +44,22 @@ class StaffManager(UserManager):
         if not username:
             raise ValueError('User must have a username')
 
-        user = self.model(
+        user = Profile(
+            username=username,
+            first_name=first_name,
+            last_name=last_name,
             email=self.normalize_email(email),
             phone=phone,
             date_of_birth=date_of_birth,
             gender=gender,
             proficiency=proficiency,
             notes=notes,
+            password=password,
         )
 
         user.set_password(password)
-        user.save(using=self._db)
+        #user.save(using=self._db)
+        user.save()
         return user
 
 
@@ -124,8 +126,13 @@ class Profile(User):
     class Meta(User.Meta):
         verbose_name = 'Profile'
         verbose_name_plural = 'Profiles'
+<<<<<<< HEAD
 
     objects = Staff()
+=======
+        
+    objects = ProfileManager()
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
 
     title = models.CharField(
         max_length=4,
@@ -175,7 +182,10 @@ class Location(models.Model):
     (There are multiple FreeGeek locations.)
     """
     name = models.CharField(max_length=200)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
     def __str__(self):
         return self.name
 
@@ -246,9 +256,15 @@ class Appointment(models.Model):
         """
         filled_string = 'unfilled'
         if self.filled:
+<<<<<<< HEAD
             filled_string = 'filled'
         appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." %
                               (str(self.start_time), str(self.end_time),
+=======
+            filled_string = 'filled by %s %s' % (self.profile.first_name, self.profile.last_name)
+        appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." % 
+                              (str(self.start_time), str(self.end_time), 
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
                                str(self.station), str(self.station.location),
                                self.proficiency, filled_string))
         return appointment_string
@@ -282,8 +298,13 @@ def create_appointment(start_time, end_time, station, proficiency):
         proficiency=proficiency,
         filled=False,
         profile=None,
+<<<<<<< HEAD
     )
 
+=======
+        )
+    
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
     appointment.save()
     return appointment
 
@@ -299,11 +320,21 @@ def assign_profile_to_appointment(profile, appointment):
     if (appointment.filled):
         raise ValidationError(
             'Appointment is already filled.'
+<<<<<<< HEAD
         )
     if (appointment.proficiency != profile.proficiency):
         raise ValidationError(
             'Profile does not have appropriate proficiency level.'
         )
+=======
+            )
+        return False
+    if(appointment.proficiency!=profile.proficiency):
+        raise ValidationError(
+            'Profile does not have appropriate proficiency level.'
+            )
+        return False
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
 
     appointment.filled = True
     appointment.profile = profile
@@ -312,7 +343,11 @@ def assign_profile_to_appointment(profile, appointment):
 
 
 # This could be a member function of Appointment instead
+<<<<<<< HEAD
 def unassign_profile_to_appointment(profile, appointment):
+=======
+def unassign_appointment(appointment):
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
     """Unassign a profile from an appointment.
 
     Need to check that appointment is filled.
@@ -321,7 +356,12 @@ def unassign_profile_to_appointment(profile, appointment):
     if (not appointment.filled):
         raise ValidationError(
             'Appointment is not yet filled.'
+<<<<<<< HEAD
         )
+=======
+            )
+        return False
+>>>>>>> 0cebc898851acfef193ac5df18d5796ea1b7db41
 
     appointment.filled = False
     appointment.profile = None
