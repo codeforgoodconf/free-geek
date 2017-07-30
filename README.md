@@ -59,5 +59,5 @@ exit 0
 ```
 5. Make the file executable: `chmod +x pre-commit`
 
-Now before every commit it is going to fun flake8 and display the output to terminal.
+Now before every commit it is going to fun flake8 and display the output while run in terminal.
 
