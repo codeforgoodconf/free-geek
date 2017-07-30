@@ -119,6 +119,7 @@ if DATABASES is None:
         #     'PASSWORD': 'freegeek',
         # },
         }
+    }
 
 
 # Password validation
