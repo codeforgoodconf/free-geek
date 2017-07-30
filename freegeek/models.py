@@ -16,7 +16,7 @@ phoneValidator = RegexValidator(
     message='Not a valid phone number')
 
 
-from models_old import *
+# from models_old import *
 
 
 class StaffManager(UserManager):
