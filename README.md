@@ -43,5 +43,21 @@ These commands:
 
 Pandoc is required to convert the files. [Installation](http://pandoc.org/installing.html) is OS dependent.
 
+## Adding pre-commit hook for running flake8
 
+1. Open the hidden `.git` folder inside free-geek folder
+2. Open the `hook` folder.
+3. You are now in `free-geek/.git/hooks/`.
+4. Create a file `pre-commit`. No extensions.
+5. Write this into the file:
+```bash
+#!/bin/sh
+
+flake8 .
+
+exit 0
+```
+5. Make the file executable: `chmod +x pre-commit`
+
+Now before every commit it is going to fun flake8 and display the output to terminal.
 
