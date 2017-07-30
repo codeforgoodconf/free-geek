@@ -165,3 +165,5 @@ GRAPH_MODELS = {
   'all_applications': True,
   'group_models': True,
 }
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
