@@ -1,15 +1,15 @@
 import os.path
 import pypandoc
+from settings import BASE_DIR as BASE_DIR
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FILES = ["README.md", "CHANGES.md", "AUTHORS.md", "LICENSE"]
+LIST_OF_FILES = ["README.md", "CHANGES.md", "AUTHORS.md", "LICENSE"]
 
 def convert_file(file):
-    """Converts .md to .rst and moves to docs folder.
+    """Converts .md to .rst file and moves it to docs folder.
     """
     output_file_with_ext = file[:-3] + ".rst"
-    input_file = os.path.join(BASE_DIR, file)
     output_file = os.path.join(BASE_DIR, "docs", output_file_with_ext)
+    input_file = os.path.join(BASE_DIR, file)
     pypandoc.convert_file(input_file, "rst", outputfile=output_file)
 
 def copy_license(file):
@@ -26,11 +26,11 @@ def copy_license(file):
     file_out.close()
 
 def main():
-    """Converts and moves specified files (FILES) to docs folder.
+    """Converts and moves specified files (LIST_OF_FILES) to docs folder.
     Markdown files are converted to reStructuredText. 
     LICENSE (that has no extension) is turned into a text file (.txt)
     """
-    for file in FILES:
+    for file in LIST_OF_FILES:
         if file != "LICENSE":
             convert_file(file)
         else:

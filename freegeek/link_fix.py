@@ -1,6 +1,7 @@
 import os.path
+from settings import BASE_DIR as BASE_DIR
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LIST_OF_FILES = ["README.rst"]
 
 def replace_links(file):
     """Replaces relative links with links to files in Github's master branch.
@@ -23,9 +24,7 @@ def replace_links(file):
 def main():
     """Fixes relative links in given .rst files.
     """
-    list_of_files = ["README.rst"]
-    
-    for file in list_of_files:
+    for file in LIST_OF_FILES:
         replace_links(file)
 
 if __name__ == "__main__":
