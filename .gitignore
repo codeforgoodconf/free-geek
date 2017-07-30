@@ -52,4 +52,4 @@ local_settings.py
 
 # development db tables
 *.sqlite
-
+*.sqlite*

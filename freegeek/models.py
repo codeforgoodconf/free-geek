@@ -16,11 +16,11 @@ phoneValidator = RegexValidator(
     message='Not a valid phone number')
 
 
-from models_old import *
+class Staff(UserManager):
+    """ Staff details.
 
-
-class StaffManager(UserManager):
-    """ Staff model Manager to allow only staff to modify Profiles"""
+    Staff can add and modify Profiles
+    """
     
     def get_by_natural_key(self, username):
         """                                                                                                                                                              
@@ -62,7 +62,7 @@ class StaffManager(UserManager):
 
 
 class Profile(User):
-    """ Additional user attributes like Prefix, experience level, title, phone 
+    """ Profile details.
 
     Attributes:
        Proficiency level
@@ -125,7 +125,7 @@ class Profile(User):
         verbose_name = 'Profile'
         verbose_name_plural = 'Profiles'
         
-    objects = StaffManager()
+    objects = Staff()
 
     title = models.CharField(
         max_length=4,
