@@ -326,27 +326,7 @@ def unassign_profile_to_appointment(profile,appointment):
     return True
 
 
-class Users(models.Model):
-    login = models.CharField(max_length=255, blank=True, null=True)
-    email = models.CharField(max_length=255, blank=True, null=True)
-    crypted_password = models.CharField(max_length=40, blank=True, null=True)
-    salt = models.CharField(max_length=40, blank=True, null=True)
-    created_at = models.DateTimeField(blank=True, null=True)
-    updated_at = models.DateTimeField(blank=True, null=True)
-    remember_token = models.CharField(max_length=255, blank=True, null=True)
-    remember_token_expires_at = models.DateTimeField(blank=True, null=True)
-    contact_id = models.IntegerField(blank=True, null=True)
-    created_by = models.ForeignKey('self', db_column='created_by', related_name='user_created_by')
-    updated_by = models.ForeignKey('self', db_column='updated_by', blank=True, null=True, related_name='user_updated_by')
-    cashier_code = models.IntegerField(blank=True, null=True)
-    can_login = models.BooleanField()
-    last_logged_in = models.DateField(blank=True, null=True)
-    shared = models.BooleanField()
-    reason_cannot_login = models.CharField(max_length=255, blank=True, null=True)
-
-
-
-class Shifts(models.Model):
+class Shift(models.Model):
     type = models.CharField(max_length=255, blank=True, null=True)
     start_time = models.TimeField(blank=True, null=True)
     end_time = models.TimeField(blank=True, null=True)
@@ -361,13 +341,13 @@ class Shifts(models.Model):
     job_id = models.IntegerField(blank=True, null=True)
     meeting_id = models.IntegerField(blank=True, null=True)
     schedule_id = models.IntegerField(blank=True, null=True)
-    weekday = models.ForeignKey('Weekdays', blank=True, null=True)
-    worker = models.ForeignKey('Workers', blank=True, null=True)
+    weekday = models.ForeignKey('Weekday', blank=True, null=True)
+    worker = models.ForeignKey('Worker', blank=True, null=True)
     actual = models.NullBooleanField()
     training = models.NullBooleanField()
     proposed = models.BooleanField()
-    created_by = models.ForeignKey('Users', db_column='created_by', blank=True, null=True, related_name='shift_created_by_user')
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True, related_name='shift_updated_by_user')
+    created_by = models.ForeignKey(User, db_column='created_by', blank=True, null=True, related_name='shift_created_by_user')
+    updated_by = models.ForeignKey(User, db_column='updated_by', blank=True, null=True, related_name='shift_updated_by_user')
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
     week_1_of_month = models.BooleanField()
@@ -380,7 +360,10 @@ class Shifts(models.Model):
     repeats_on_months = models.IntegerField()
     week = models.CharField(max_length=1, blank=True, null=True)
 
-class Weekdays(models.Model):
+    class Meta:
+        db_table = 'shifts'
+
+class Weekday(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
     short_name = models.CharField(max_length=255, blank=True, null=True)
     is_open = models.NullBooleanField()
@@ -389,9 +372,12 @@ class Weekdays(models.Model):
     open_time = models.TimeField()
     close_time = models.TimeField()
 
+    class Meta:
+        db_table = 'weekdays'
 
 
-class Workers(models.Model):
+
+class Worker(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
     standard_weekly_hours = models.FloatField(blank=True, null=True)
     weekly_admin_hours = models.FloatField(blank=True, null=True)
@@ -408,3 +394,23 @@ class Workers(models.Model):
     floor_hours = models.FloatField(blank=True, null=True)
     ceiling_hours = models.FloatField(blank=True, null=True)
     virtual = models.BooleanField()
+
+    class Meta:
+        db_table = 'workers'
+
+class Role(models.Model):
+    name = models.CharField(max_length=40, blank=True, null=True)
+    created_at = models.DateTimeField(blank=True, null=True)
+    updated_at = models.DateTimeField(blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        db_table = 'roles'
+
+
+class UserRole(models.Model):
+    user = models.ForeignKey(User, blank=True, null=True)
+    role = models.ForeignKey(Role, blank=True, null=True)
+
+    class Meta:
+        db_table = 'roles_users'
