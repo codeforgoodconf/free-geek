@@ -13,7 +13,7 @@ __pycache__/*
 */.ipynb_checkpoints/*
 \#*
 .~*
-
+*.bak
 
 # Project files
 .ropeproject
@@ -21,6 +21,7 @@ __pycache__/*
 .pydevproject
 .settings
 .idea
+.vscode
 myenv/*
 
 # Package files
@@ -50,4 +51,6 @@ local_settings.py
 *.sql
 .~*
 ~*
+# development db tables
+*.sqlite
 

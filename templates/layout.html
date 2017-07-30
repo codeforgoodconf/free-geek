@@ -1,4 +1,6 @@
 {% load static from static %}
+{% load staticfiles %}
+
 
 <!doctype html>
 <html lang="en">
@@ -9,8 +11,8 @@
 <body>
   <div id="nav">
       <ul>
-          <li>Home</li>
-          <li>Calendar </li>
+          <li> <a href="/"> Home </a></li>
+          <li> <a href="/diary"> Calendar</a></li>
       </ul>
   </div>
   {%  block content %}
