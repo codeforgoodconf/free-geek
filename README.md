@@ -24,5 +24,10 @@ $ pip install -e freegeek/
 ```
 
 
+# Testing 
+
+```shell
+    pip install -r test-requirements.txt
+```
 
 
