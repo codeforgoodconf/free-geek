@@ -33,7 +33,7 @@ After changes are made in markdown files run these from the level of free-geek f
 ```bash
 $ python freegeek/convert_docs.py
 $ python freegeek/link_fix.py
-$ python manage.py docs
+$ python setup.py docs
 ```
 These commands:
 
@@ -43,10 +43,28 @@ These commands:
 
 Pandoc is required to convert the files. [Installation](http://pandoc.org/installing.html) is OS dependent.
 
-# Testing 
+## Testing 
 
 ```shell
     pip install -r test-requirements.txt
 ```
+## Adding flake8 into a pre-commit hook
 
+1. Open the hidden `.git` folder inside free-geek folder
+2. Open the `hook` folder.
+3. You are now in `free-geek/.git/hooks/`.
+4. Create a file `pre-commit`. No extensions.
+5. Write this into the file:
 
+```bash
+#!/bin/sh
+
+flake8 .
+
+exit 0
+```
+5. Make the file executable: `chmod +x pre-commit`
+
+Commits must be executed in the terminal, not GUI. 
+
+Now before every commit flake8 will run and display the output into terminal window. It will not prevent the commit. 
