@@ -13,13 +13,12 @@ from django.db import models
 
 
 class Actions(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=255, blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by')
-    updated_by = models.ForeignKey('Users', db_column='updated_by')
+    created_by = models.ForeignKey('Users', db_column='created_by', related_name='created_actions_set')
+    updated_by = models.ForeignKey('Users', db_column='updated_by', related_name='updated_actions_set')
     name = models.CharField(max_length=40)
 
     class Meta:
@@ -28,7 +27,6 @@ class Actions(models.Model):
 
 
 class Assignments(models.Model):
-    id = models.AutoField()
     volunteer_shift = models.ForeignKey('VolunteerShifts', blank=True, null=True)
     contact_id = models.IntegerField(blank=True, null=True)
     start_time = models.TimeField(blank=True, null=True)
@@ -47,7 +45,6 @@ class Assignments(models.Model):
 
 
 class AttendanceTypes(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     cancelled = models.NullBooleanField()
     created_at = models.DateTimeField(blank=True, null=True)
@@ -59,7 +56,6 @@ class AttendanceTypes(models.Model):
 
 
 class BuilderTasks(models.Model):
-    id = models.AutoField()
     cashier_signed_off_by = models.ForeignKey('Users', db_column='cashier_signed_off_by', blank=True, null=True)
     action_id = models.IntegerField()
     contact_id = models.IntegerField()
@@ -73,7 +69,6 @@ class BuilderTasks(models.Model):
 
 
 class CallStatusTypes(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -84,7 +79,6 @@ class CallStatusTypes(models.Model):
 
 
 class CommunityServiceTypes(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     hours_multiplier = models.FloatField()
     lock_version = models.IntegerField()
@@ -98,7 +92,6 @@ class CommunityServiceTypes(models.Model):
 
 
 class ContactDuplicates(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField()
     dup_check = models.TextField()
 
@@ -108,7 +101,6 @@ class ContactDuplicates(models.Model):
 
 
 class ContactMethodTypes(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     parent_id = models.IntegerField(blank=True, null=True)
     lock_version = models.IntegerField()
@@ -122,7 +114,6 @@ class ContactMethodTypes(models.Model):
 
 
 class ContactMethods(models.Model):
-    id = models.AutoField()
     contact_method_type_id = models.IntegerField()
     value = models.CharField(max_length=100)
     ok = models.NullBooleanField()
@@ -138,7 +129,6 @@ class ContactMethods(models.Model):
 
 
 class ContactTypes(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     for_who = models.CharField(max_length=3, blank=True, null=True)
     lock_version = models.IntegerField()
@@ -153,10 +143,10 @@ class ContactTypes(models.Model):
 
 
 class ContactTypesContacts(models.Model):
+    id = models.BigIntegerField(primary_key=True)
     contact_id = models.IntegerField()
     contact_type_id = models.IntegerField()
     created_at = models.DateTimeField(blank=True, null=True)
-    id = models.BigIntegerField()
 
     class Meta:
         managed = False
@@ -164,7 +154,6 @@ class ContactTypesContacts(models.Model):
 
 
 class ContactVolunteerTaskTypeCounts(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     volunteer_task_type_id = models.IntegerField(blank=True, null=True)
     count = models.IntegerField(blank=True, null=True)
@@ -177,7 +166,6 @@ class ContactVolunteerTaskTypeCounts(models.Model):
 
 
 class Contacts(models.Model):
-    id = models.AutoField()
     is_organization = models.NullBooleanField()
     sort_name = models.CharField(max_length=100, blank=True, null=True)
     first_name = models.CharField(max_length=25, blank=True, null=True)
@@ -194,13 +182,13 @@ class Contacts(models.Model):
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by')
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey('Users', db_column='created_by', related_name='created_contacts_set')
+    updated_by = models.ForeignKey('Users', db_column='updated_by', related_name='updated_contacts_set', blank=True, null=True)
     next_milestone = models.IntegerField(blank=True, null=True)
     addr_certified = models.BooleanField()
     contract_id = models.IntegerField()
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', related_name='cashier_created_contacts_set', blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', related_name='cashier_updated_contacts_set', blank=True, null=True)
     fully_covered = models.NullBooleanField()
     birthday = models.DateField(blank=True, null=True)
     volunteer_intern_title = models.CharField(max_length=255, blank=True, null=True)
@@ -215,7 +203,6 @@ class Contacts(models.Model):
 
 
 class ContactsMailings(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     mailing_id = models.IntegerField()
     bounced = models.BooleanField()
@@ -229,7 +216,6 @@ class ContactsMailings(models.Model):
 
 
 class Contracts(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     label = models.CharField(max_length=255, blank=True, null=True)
@@ -244,7 +230,6 @@ class Contracts(models.Model):
 
 
 class Customizations(models.Model):
-    id = models.AutoField()
     key = models.CharField(max_length=255, blank=True, null=True)
     value = models.CharField(max_length=255, blank=True, null=True)
 
@@ -254,7 +239,6 @@ class Customizations(models.Model):
 
 
 class DefaultAssignments(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     volunteer_default_shift = models.ForeignKey('VolunteerDefaultShifts', blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -277,7 +261,6 @@ class DefaultAssignments(models.Model):
 
 
 class Defaults(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=100, blank=True, null=True)
     value = models.TextField(blank=True, null=True)
     lock_version = models.IntegerField()
@@ -290,7 +273,6 @@ class Defaults(models.Model):
 
 
 class DisbursementTypes(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -303,7 +285,6 @@ class DisbursementTypes(models.Model):
 
 
 class Disbursements(models.Model):
-    id = models.AutoField()
     comments = models.TextField(blank=True, null=True)
     contact_id = models.IntegerField()
     disbursement_type_id = models.IntegerField()
@@ -314,8 +295,10 @@ class Disbursements(models.Model):
     needs_attention = models.BooleanField()
     created_by = models.IntegerField()
     updated_by = models.IntegerField(blank=True, null=True)
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='created_by_disbursements_set', blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='updated_by_disbursements_set', blank=True, null=True)
     adjustment = models.BooleanField()
 
     class Meta:
@@ -324,7 +307,6 @@ class Disbursements(models.Model):
 
 
 class DisciplinaryActionAreas(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -344,7 +326,6 @@ class DisciplinaryActionAreasDisciplinaryActions(models.Model):
 
 
 class DisciplinaryActions(models.Model):
-    id = models.AutoField()
     notes = models.TextField(blank=True, null=True)
     contact_id = models.IntegerField()
     disabled = models.BooleanField()
@@ -352,8 +333,10 @@ class DisciplinaryActions(models.Model):
     updated_at = models.DateTimeField(blank=True, null=True)
     updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
     created_by = models.ForeignKey('Users', db_column='created_by', blank=True, null=True)
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='created_by_diciplinaryactions_set', blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='updated_by_diciplinaryactions_set',  blank=True, null=True)
 
     class Meta:
         managed = False
@@ -361,7 +344,6 @@ class DisciplinaryActions(models.Model):
 
 
 class DiscountNames(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=255, blank=True, null=True)
     available = models.NullBooleanField()
     created_at = models.DateTimeField(blank=True, null=True)
@@ -373,7 +355,6 @@ class DiscountNames(models.Model):
 
 
 class DiscountPercentages(models.Model):
-    id = models.AutoField()
     percentage = models.IntegerField(blank=True, null=True)
     available = models.NullBooleanField()
     created_at = models.DateTimeField(blank=True, null=True)
@@ -385,7 +366,6 @@ class DiscountPercentages(models.Model):
 
 
 class DisktestBatchDrives(models.Model):
-    id = models.AutoField()
     serial_number = models.CharField(max_length=255)
     system_serial_number = models.CharField(max_length=255, blank=True, null=True)
     destroyed_at = models.DateTimeField(blank=True, null=True)
@@ -401,7 +381,6 @@ class DisktestBatchDrives(models.Model):
 
 
 class DisktestBatches(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField()
     name = models.CharField(max_length=255)
     date = models.DateField()
@@ -416,7 +395,6 @@ class DisktestBatches(models.Model):
 
 
 class DisktestRuns(models.Model):
-    id = models.AutoField()
     vendor = models.CharField(max_length=255, blank=True, null=True)
     model = models.CharField(max_length=255, blank=True, null=True)
     serial_number = models.CharField(max_length=255, blank=True, null=True)
@@ -437,22 +415,23 @@ class DisktestRuns(models.Model):
 
 
 class Donations(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     postal_code = models.CharField(max_length=25, blank=True, null=True)
     comments = models.TextField(blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by')
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey('Users', related_name='created_by_donations_set', db_column='created_by')
+    updated_by = models.ForeignKey('Users', related_name='updated_by_donations_set', db_column='updated_by', blank=True, null=True)
     reported_required_fee_cents = models.IntegerField(blank=True, null=True)
     reported_suggested_fee_cents = models.IntegerField(blank=True, null=True)
     needs_attention = models.BooleanField()
     invoice_resolved_at = models.DateTimeField(blank=True, null=True)
     contract_id = models.IntegerField()
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='cashier_created_by_donations_set',blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='cashier_updated_by_donations_set', blank=True, null=True)
     adjustment = models.BooleanField()
     occurred_at = models.DateTimeField()
     is_pickup = models.BooleanField()
@@ -478,7 +457,6 @@ class EngineSchemaInfo(models.Model):
 
 
 class Generics(models.Model):
-    id = models.AutoField()
     value = models.CharField(max_length=100)
     only_serial = models.BooleanField()
     usable = models.BooleanField()
@@ -491,7 +469,6 @@ class Generics(models.Model):
 
 
 class GizmoCategories(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=40)
 
@@ -501,7 +478,6 @@ class GizmoCategories(models.Model):
 
 
 class GizmoContexts(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -526,7 +502,6 @@ class GizmoContextsGizmoTypes(models.Model):
 
 
 class GizmoEvents(models.Model):
-    id = models.AutoField()
     donation_id = models.IntegerField(blank=True, null=True)
     sale_id = models.IntegerField(blank=True, null=True)
     disbursement_id = models.IntegerField(blank=True, null=True)
@@ -561,7 +536,6 @@ class GizmoEvents(models.Model):
 
 
 class GizmoReturns(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     created_by = models.IntegerField(blank=True, null=True)
     updated_by = models.IntegerField(blank=True, null=True)
@@ -582,7 +556,6 @@ class GizmoReturns(models.Model):
 
 
 class GizmoTypeGroups(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -602,7 +575,6 @@ class GizmoTypeGroupsGizmoTypes(models.Model):
 
 
 class GizmoTypes(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -628,7 +600,6 @@ class GizmoTypes(models.Model):
 
 
 class Holidays(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     holiday_date = models.DateField(blank=True, null=True)
     is_all_day = models.NullBooleanField()
@@ -644,7 +615,6 @@ class Holidays(models.Model):
 
 
 class IncomeStreams(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -656,7 +626,6 @@ class IncomeStreams(models.Model):
 
 
 class Jobs(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     income_stream_id = models.IntegerField(blank=True, null=True)
@@ -675,7 +644,6 @@ class Jobs(models.Model):
 
 
 class Logs(models.Model):
-    id = models.AutoField()
     table_name = models.CharField(max_length=255, blank=True, null=True)
     action = models.CharField(max_length=255, blank=True, null=True)
     user_id = models.IntegerField(blank=True, null=True)
@@ -689,7 +657,6 @@ class Logs(models.Model):
 
 
 class Mailings(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=20, blank=True, null=True)
     description = models.CharField(max_length=100)
     created_by = models.IntegerField()
@@ -703,7 +670,6 @@ class Mailings(models.Model):
 
 
 class MeetingMinders(models.Model):
-    id = models.AutoField()
     meeting_id = models.IntegerField(blank=True, null=True)
     days_before = models.IntegerField(blank=True, null=True)
     recipient = models.CharField(max_length=255, blank=True, null=True)
@@ -739,7 +705,6 @@ class NewsletterSubscribers(models.Model):
 
 
 class Notes(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     system = models.ForeignKey('Systems', blank=True, null=True)
     body = models.TextField(blank=True, null=True)
@@ -752,7 +717,6 @@ class Notes(models.Model):
 
 
 class PayPeriods(models.Model):
-    id = models.AutoField()
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -764,7 +728,6 @@ class PayPeriods(models.Model):
 
 
 class PaymentMethods(models.Model):
-    id = models.AutoField()
     description = models.CharField(max_length=100, blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -777,7 +740,6 @@ class PaymentMethods(models.Model):
 
 
 class Payments(models.Model):
-    id = models.AutoField()
     donation_id = models.IntegerField(blank=True, null=True)
     sale_id = models.IntegerField(blank=True, null=True)
     payment_method_id = models.IntegerField()
@@ -802,7 +764,6 @@ class PluginSchemaInfo(models.Model):
 
 
 class PointsTrades(models.Model):
-    id = models.AutoField()
     from_contact_id = models.IntegerField(blank=True, null=True)
     to_contact_id = models.IntegerField(blank=True, null=True)
     points = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
@@ -819,7 +780,6 @@ class PointsTrades(models.Model):
 
 
 class PostalCodes(models.Model):
-    id = models.AutoField()
     postal_code = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -831,7 +791,6 @@ class PostalCodes(models.Model):
 
 
 class PricingDatas(models.Model):
-    id = models.AutoField()
     table_name = models.CharField(max_length=255, blank=True, null=True)
     printme_value = models.CharField(max_length=255, blank=True, null=True)
     lookup_type = models.CharField(max_length=255, blank=True, null=True)
@@ -854,7 +813,6 @@ class PricingTypesTypes(models.Model):
 
 
 class Privileges(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -877,7 +835,6 @@ class PrivilegesRoles(models.Model):
 
 
 class Programs(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -891,7 +848,6 @@ class Programs(models.Model):
 
 
 class RecyclingShipments(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField()
     bill_of_lading = models.CharField(max_length=255)
     received_at = models.DateField()
@@ -906,7 +862,6 @@ class RecyclingShipments(models.Model):
 
 
 class Recyclings(models.Model):
-    id = models.AutoField()
     comments = models.TextField(blank=True, null=True)
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -925,7 +880,6 @@ class Recyclings(models.Model):
 
 
 class ReportLogs(models.Model):
-    id = models.AutoField()
     report_name = models.CharField(max_length=255, blank=True, null=True)
     user_id = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -937,7 +891,6 @@ class ReportLogs(models.Model):
 
 
 class Resources(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -948,7 +901,6 @@ class Resources(models.Model):
 
 
 class ResourcesVolunteerDefaultEvents(models.Model):
-    id = models.AutoField()
     volunteer_default_event = models.ForeignKey('VolunteerDefaultEvents', blank=True, null=True)
     resource_id = models.IntegerField(blank=True, null=True)
     start_time = models.TimeField(blank=True, null=True)
@@ -965,7 +917,6 @@ class ResourcesVolunteerDefaultEvents(models.Model):
 
 
 class ResourcesVolunteerEvents(models.Model):
-    id = models.AutoField()
     volunteer_event = models.ForeignKey('VolunteerEvents', blank=True, null=True)
     resource_id = models.IntegerField(blank=True, null=True)
     resources_volunteer_default_event_id = models.IntegerField(blank=True, null=True)
@@ -981,7 +932,6 @@ class ResourcesVolunteerEvents(models.Model):
 
 
 class ReturnPolicies(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     text = models.TextField(blank=True, null=True)
@@ -994,7 +944,6 @@ class ReturnPolicies(models.Model):
 
 
 class Roles(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=40, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -1015,7 +964,6 @@ class RolesUsers(models.Model):
 
 
 class Rosters(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -1041,7 +989,6 @@ class RostersSkeds(models.Model):
 
 
 class RrItems(models.Model):
-    id = models.AutoField()
     rr_set_id = models.IntegerField(blank=True, null=True)
     repeats_every = models.IntegerField(blank=True, null=True)
     repeats_on = models.IntegerField(blank=True, null=True)
@@ -1080,7 +1027,6 @@ class RrItems(models.Model):
 
 
 class RrSets(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     effective_date = models.DateField(blank=True, null=True)
     ineffective_date = models.DateField(blank=True, null=True)
@@ -1092,7 +1038,6 @@ class RrSets(models.Model):
 
 
 class SaleTypes(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -1104,7 +1049,6 @@ class SaleTypes(models.Model):
 
 
 class Sales(models.Model):
-    id = models.AutoField()
     contact_id = models.IntegerField(blank=True, null=True)
     postal_code = models.CharField(max_length=25, blank=True, null=True)
     comments = models.TextField(blank=True, null=True)
@@ -1132,7 +1076,6 @@ class Sales(models.Model):
 
 
 class Schedules(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     effective_date = models.DateField(blank=True, null=True)
@@ -1164,7 +1107,6 @@ class SchemaMigrations(models.Model):
 
 
 class Sessions(models.Model):
-    id = models.AutoField()
     session_id = models.CharField(max_length=255)
     data = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -1188,7 +1130,6 @@ class ShiftFootnotes(models.Model):
 
 
 class Shifts(models.Model):
-    id = models.AutoField()
     type = models.CharField(max_length=255, blank=True, null=True)
     start_time = models.TimeField(blank=True, null=True)
     end_time = models.TimeField(blank=True, null=True)
@@ -1228,7 +1169,6 @@ class Shifts(models.Model):
 
 
 class SkedjulnatorAccesses(models.Model):
-    id = models.AutoField()
     user = models.ForeignKey('Users', blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -1239,7 +1179,6 @@ class SkedjulnatorAccesses(models.Model):
 
 
 class Skeds(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
@@ -1251,7 +1190,6 @@ class Skeds(models.Model):
 
 
 class SpecSheetQuestionConditions(models.Model):
-    id = models.AutoField()
     spec_sheet_question_id = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
     operator = models.CharField(max_length=255, blank=True, null=True)
@@ -1265,7 +1203,6 @@ class SpecSheetQuestionConditions(models.Model):
 
 
 class SpecSheetQuestions(models.Model):
-    id = models.AutoField()
     name = models.CharField(max_length=255, blank=True, null=True)
     question = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
@@ -1278,7 +1215,6 @@ class SpecSheetQuestions(models.Model):
 
 
 class SpecSheetValues(models.Model):
-    id = models.AutoField()
     spec_sheet = models.ForeignKey('SpecSheets', blank=True, null=True)
     spec_sheet_question_id = models.IntegerField(blank=True, null=True)
     value = models.CharField(max_length=255, blank=True, null=True)
@@ -1388,8 +1324,8 @@ class Systems(models.Model):
 class TechSupportNotes(models.Model):
     contact_id = models.IntegerField()
     notes = models.TextField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by', blank=True, null=True)
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey('Users', db_column='created_by', related_name='created_techsupportnotes_set', blank=True, null=True)
+    updated_by = models.ForeignKey('Users', db_column='updated_by', related_name='updated_techsupportnotes_set', blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
 
