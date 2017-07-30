@@ -13,7 +13,7 @@ class AppointmentTestCase(TestCase):
         """Testing that appointment string is returned with correct info and is grammatically correct"""
         appointment1 = Appointment.objects.get(start_time = '2017-07-31 09:15', end_time = '2017-07-31 11:15', filled = False, proficiency= 'LEVEL1',  station = 'recycling')
         self.assertEqual(appointment1.__str__(), 'Appointment: 2017-07-31 09:15 to 2017-07-31 11:15 at recycling in LOCATION requires L1')
-
+#
 
 class StationTestCase(TestCase):
     def setup(self):
@@ -33,3 +33,4 @@ class LocationTestCase(TestCase):
         self.assertEqual(location_b.__str__(), 'Location B')
 
 
+#

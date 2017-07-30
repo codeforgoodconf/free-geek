@@ -49,4 +49,4 @@ local_settings.py
 *.sql
 .~*
 ~*
-
+db.sqlite3
