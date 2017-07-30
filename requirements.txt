@@ -6,4 +6,3 @@ django-filter>=1.0.1
 gunicorn==19.7.1
 psycopg2>=2.7.3<2.8.0
 pypandoc==1.4
-pyndoc==1.19.2

@@ -26,3 +26,22 @@ $ pip install -e freegeek/
 ## Documentation
 
 The project documentation is auto-rendered from the [github repository](https://github.com/codeforgoodconf/free-geek) to [read the docs](https://readthedocs.org/projects/free-geek/).
+
+### Generating documentation
+After changes are made in markdown files run these from the level of free-geek folder:
+
+```bash
+$ python freegeek/convert_docs.py
+$ python freegeek/link_fix.py
+$ python manage.py docs
+```
+These commands:
+
+1. Convert .md to .rst files 
+2. Fix links in README.rst
+3. Build sphinx docs (read the docs)
+
+Pandoc is required to convert the files. [Installation](http://pandoc.org/installing.html) is OS dependent.
+
+
+
