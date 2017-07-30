@@ -1548,10 +1548,17 @@ class VolunteerTasks(models.Model):
     community_service_type_id = models.IntegerField(blank=True, null=True)
     volunteer_task_type = models.ForeignKey(VolunteerTaskTypes, blank=True, null=True)
     date_performed = models.DateField(blank=True, null=True)
-    created_by = models.ForeignKey(Users, db_column='created_by')
-    updated_by = models.ForeignKey(Users, db_column='updated_by', blank=True, null=True)
-    cashier_created_by = models.ForeignKey(Users, db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey(Users, db_column='cashier_updated_by', blank=True, null=True)
+    created_by = models.ForeignKey(Users, db_column='created_by',
+        related_name='created_by_volunteertasks_set')
+    updated_by = models.ForeignKey(Users, db_column='updated_by',
+        related_name='updated_by_volunteertasks_set',
+        blank=True, null=True)
+    cashier_created_by = models.ForeignKey(Users, db_column='cashier_created_by',
+        related_name='cashier_created_by_volunteertasks_set',
+        blank=True, null=True)
+    cashier_updated_by = models.ForeignKey(Users, db_column='cashier_updated_by',
+        related_name='cashier_updated_by_volunteertasks_set',
+        blank=True, null=True)
     program_id = models.IntegerField()
 
     class Meta:
@@ -1632,8 +1639,12 @@ class WorkShifts(models.Model):
     actual = models.NullBooleanField()
     training = models.NullBooleanField()
     proposed = models.NullBooleanField()
-    created_by = models.ForeignKey(Users, db_column='created_by', blank=True, null=True)
-    updated_by = models.ForeignKey(Users, db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey(Users, db_column='created_by',
+        related_name='created_by_workshifts_set',
+        blank=True, null=True)
+    updated_by = models.ForeignKey(Users, db_column='updated_by',
+        related_name='updated_by_workshifts_set',
+        blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
     offsite = models.BooleanField()
