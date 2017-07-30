@@ -2,7 +2,7 @@ import unittest
 from django.test import TestCase
 from freegeek.models import Appointment
 from freegeek.models import Station
-from freekgeek.models import Location
+from freegeek.models import Location
 
 
 class AppointmentTestCase(TestCase):
@@ -33,4 +33,5 @@ class LocationTestCase(TestCase):
         self.assertEqual(location_b.__str__(), 'Location B')
 
 
-#
+# To run tests run python manage.py test tests to run all || python manage.py test tests test_models to just run this file
+
