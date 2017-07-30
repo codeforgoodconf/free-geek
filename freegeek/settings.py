@@ -97,12 +97,19 @@ WSGI_APPLICATION = 'freegeek.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+
 if DATABASES is None:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         },
+        'testing_db': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'testsqldb',
+            'TEST': {
+                'NAME': 'auto_tests'
+            }
         # Postgres connection
         # 'postgres': {
         #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -112,7 +119,9 @@ if DATABASES is None:
         #     'USER': 'freegeek',
         #     'PASSWORD': 'freegeek',
         # },
+        }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -158,7 +167,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
 
