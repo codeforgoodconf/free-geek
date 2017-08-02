@@ -1,6 +1,6 @@
 # Developers
 
-* Brigette (issuer deconflicter) Eckert <brigette.eckert@live.com> | [Brigette-Eckert](https://github.com/Brigette-Eckert)
+* Brigette (feature deconflicter) Eckert <brigette.eckert@live.com> | [Brigette-Eckert](https://github.com/Brigette-Eckert)
 * Emanuel (api gatekeeper) Castro <eecastro1011@gmail.com> | [ECastro10](https://github.com/ECastro10)
 * Hobson (data debaser) Lane <github@totalgood.com>  | [hobson](https://github.com/hobson)
 * Jason (shy charisma) Jones  <jasonr.jones14@gmail.com> | [JasonOnes](https://github.com/JasonOnes)
