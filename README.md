@@ -43,6 +43,24 @@ These commands:
 
 Pandoc is required to convert the files. [Installation](http://pandoc.org/installing.html) is OS dependent.
 
+#### Generating documentation automatically. 
+
+It is possible to add the above python scripts to pre-commit hooks. Changes will not be commited, but they are generated for the next commit/push. 
+
+Please follow the "Adding flake8 into a pre-commit hook" for instructions on pre-commit hook, and use this script instead.
+
+```
+#!/bin/sh
+
+flake8 .
+python freegeek/convert_docs.py
+python freegeek/link_fix.py
+python setup.py docs
+
+exit 0
+```
+It is possible to further automate the generation by adding git commands to the bash script. It is hover not reccomended to auto commit to git, thus it is left from the instructions.
+
 ## Testing 
 
 ```shell
