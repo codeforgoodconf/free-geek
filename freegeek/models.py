@@ -17,7 +17,7 @@ phoneValidator = RegexValidator(
     message='Not a valid phone number')
 
 
-class StaffManager(UserManager):
+class ProfileManager(UserManager):
     """ Staff model Manager to allow only staff to modify Profiles"""
     
     def get_by_natural_key(self, username):

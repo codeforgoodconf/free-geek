@@ -14,15 +14,13 @@
     <input type="email" name="email"><br>
 
     <br><b>Password</b><br>
-    <input type="password" name="password" id="password"><br>
+    <input onKeyUp="checkBothPasswords()" type="password" name="password" id="password"><br>
 
     <b>Re-enter Password</b><br>
-    <input type="password" name="passwordcheck" id="password_check"><br>
+    <input onKeyUp="checkBothPasswords()" type="password" name="passwordcheck" id="password_check"><br>
 
-    <button type="submit" disabled="disabled">Register</button>
+    <button type="submit" disabled="disabled" id="register_button">Register</button>
 
 </form>
-
-    <button onclick="checkBothPasswords()">test button baby!</button>
 
 {% endblock %}
