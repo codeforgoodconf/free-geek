@@ -21,46 +21,50 @@ class StaffManager(UserManager):
     """ Staff model Manager to allow only staff to modify Profiles"""
     
     def get_by_natural_key(self, username):
-        """                                                                                                                                                              
-        Enable serialisation without pk. Not needed ATM.                                                                                                                 
+        """
+        Enable serialisation without pk. Not needed ATM.
         """
         return self.get(username=username)
 
-
     def create_user(self,
-        username,
-        first_name,
-        last_name,
-        proficiency,
-        email,
-        phone,
-        date_of_birth,
-        gender,
-        notes,
-        password=None
-    ):
-        """                                                                                                                                                              
-        Creates and saves a User with the given particulars and password.                                                                                            
+                    username,
+                    first_name,
+                    last_name,
+                    proficiency,
+                    email,
+                    phone,
+                    date_of_birth,
+                    gender,
+                    notes,
+                    password=None
+                    ):
+        """
+        Creates and saves a User with the given particulars and password.
         """
         if not username:
             raise ValueError('User must have a username')
 
-        user = self.model(
+        user = Profile(
+            username=username,
+            first_name=first_name,
+            last_name=last_name,
             email=self.normalize_email(email),
             phone=phone,
             date_of_birth=date_of_birth,
             gender=gender,
             proficiency=proficiency,
             notes=notes,
+            password=password,
         )
 
         user.set_password(password)
-        user.save(using=self._db)
+        #user.save(using=self._db)
+        user.save()
         return user
 
 
 class Profile(User):
-    """ Additional user attributes like Prefix, experience level, title, phone 
+    """ Profile details.
 
     Attributes:
        Proficiency level
@@ -69,7 +73,7 @@ class Profile(User):
        IsTeacher (bool)
 
     Profile can (un)schedule self for appointment.
-    
+
     Need to be able to see all scheduled appointments for the profile.
     """
 
@@ -77,7 +81,7 @@ class Profile(User):
     IsIntern = False
     IsTeacher = False
 
-    #proficiency options
+    # proficiency options
     LEVEL1 = 'L1'
     LEVEL2 = 'L2'
     LEVEL3 = 'L3'
@@ -87,7 +91,7 @@ class Profile(User):
         (LEVEL3, 'Level 3'),
     )
 
-    # gender options                                                                                                                                                     
+    # gender options
     MALE = 'M'
     FEMALE = 'F'
     OTHER = 'O'
@@ -99,7 +103,7 @@ class Profile(User):
 
     # title options
     # MAKE SURE TO HANDLE THE "NONE" OPTION FOR OUTPUT CORRECTLY.
-                                                                                                                                                      
+
     MR = 'MR'
     MRS = 'MRS'
     MISS = 'MISS'
@@ -122,8 +126,8 @@ class Profile(User):
     class Meta(User.Meta):
         verbose_name = 'Profile'
         verbose_name_plural = 'Profiles'
-        
-    objects = StaffManager()
+
+    objects = ProfileManager()
 
     title = models.CharField(
         max_length=4,
@@ -148,49 +152,47 @@ class Profile(User):
     )
     notes = models.TextField(blank=True)
 
-
     def natural_key(self):
-        """                                                                                                                                                              
-        Serialisation aid. Not needed ATM.                                                                                                                               
+        """
+        Serialisation aid. Not needed ATM.
         """
         return (self.username,)
 
-
     def age(self):
-        """                                                                                                                                                              
-        Age to the nearest year.                                                                                                                                         
+        """
+        Age to the nearest year.
         """
         if self.date_of_birth:
             now = timezone.now()
             return now.year - self.date_of_birth.year
         return None
 
-
     def __str__(self):
         return '{0} {1}'.format(self.first_name, self.last_name)
 
 
-
 class Location(models.Model):
     """Location model.
-    
+
     (There are multiple FreeGeek locations.)
     """
-    location_name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
+
     def __str__(self):
-        return self.location_name
+        return self.name
 
 
 class Station(models.Model):
     """Station model.
-    
+
     Has a station_name.
     Associated with a Location. (Where the Station is located.)
     """
-    station_name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
+
     def __str__(self):
-        return self.station_name
+        return self.name
 
 
 class Appointment(models.Model):
@@ -207,8 +209,10 @@ class Appointment(models.Model):
     start_time = models.DateTimeField('start_time')
     end_time = models.DateTimeField('end_time')
     filled = models.BooleanField('filled')
+    # NOT SURE THIS IS THE RIGHT WAY TO HANDLE THE PROFILE ASSIGNED TO THE APPOINTMENT
+    profile = models.ForeignKey(Profile, on_delete=models.PROTECT, blank=True, null=True)
 
-    #proficiency options
+    # proficiency options
     LEVEL1 = 'L1'
     LEVEL2 = 'L2'
     LEVEL3 = 'L3'
@@ -228,9 +232,9 @@ class Appointment(models.Model):
 
     # Do not check here whether they have same Station
     # This can be done separately (e.g. when iterating through all appointments)
-    def __eq__(self,other):
+    def __eq__(self, other):
         """Determine if Appointments overlap
-        NOTE: time period end time is non-inclusive.     
+        NOTE: time period end time is non-inclusive.
         """
         if (self.end_time <= other.start_time):
             return False
@@ -242,20 +246,23 @@ class Appointment(models.Model):
         """Recast Appointment as string which gives a summary of the Appointment.
         This includes start_time, end_time, station, location, and proficiency.
         """
-        appointment_string = ("Appointment: %s to %s at %s in %s requires %s" % 
+        filled_string = 'unfilled'
+        if self.filled:
+            filled_string = 'filled by %s %s' % (self.profile.first_name, self.profile.last_name)
+        appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." % 
                               (str(self.start_time), str(self.end_time), 
                                str(self.station), str(self.station.location),
-                               proficiency))
+                               self.proficiency, filled_string))
         return appointment_string
 
 
 def create_appointment(start_time, end_time, station, proficiency):
     """Create an appointment
 
-    Would be nice to check whether the appointment is at the same time as other 
+    Would be nice to check whether the appointment is at the same time as other
     appointments, and confirm whether overlapping appointments are intentional.
 
-    Creating multiple appointments with a single action would be nice, but 
+    Creating multiple appointments with a single action would be nice, but
     that will probably be taken care of in views.
     """
     if not start_time:
@@ -267,59 +274,60 @@ def create_appointment(start_time, end_time, station, proficiency):
     if not proficiency:
         raise ValueError('Appointment must have a proficiency.')
 
-    if(start_time>end_time):
+    if (start_time > end_time):
         raise ValidationError('Start time must come before end time.')
-    
+
     appointment = self.model(
         start_time=start_time,
         end_time=end_time,
         station=station,
         proficiency=proficiency,
         filled=False,
-        profile=none,
+        profile=None,
         )
-    
     appointment.save()
     return appointment
 
 
 # This could be a member function of Appointment instead
-def assign_profile_to_appointment(profile,appointment):
+def assign_profile_to_appointment(profile, appointment):
     """Assign a profile to an appointment.
-    
+
     Need to check that appointment is not already filled.
     Need to check that profile has the correct proficiency level.
     """
 
-    if(appointment.filled):
+    if (appointment.filled):
         raise ValidationError(
             'Appointment is already filled.'
             )
+        return False
     if(appointment.proficiency!=profile.proficiency):
         raise ValidationError(
             'Profile does not have appropriate proficiency level.'
             )
+        return False
 
-    appointment.filled=True
-    appointment.profile=profile
+    appointment.filled = True
+    appointment.profile = profile
     appointment.save()
     return True
 
 
 # This could be a member function of Appointment instead
-def unassign_profile_to_appointment(profile,appointment):
+def unassign_appointment(appointment):
     """Unassign a profile from an appointment.
-    
+
     Need to check that appointment is filled.
     """
-    
-    if(not appointment.filled):
+
+    if (not appointment.filled):
         raise ValidationError(
             'Appointment is not yet filled.'
             )
+        return False
 
-    appointment.filled=False
-    appointment.profile=None
+    appointment.filled = False
+    appointment.profile = None
     appointment.save()
     return True
-

@@ -182,13 +182,17 @@ class Contacts(models.Model):
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by', related_name='created_contacts_set')
-    updated_by = models.ForeignKey('Users', db_column='updated_by', related_name='updated_contacts_set', blank=True, null=True)
+    created_by = models.ForeignKey('Users', db_column='created_by', related_name='created_by_contacts_set')
+    updated_by = models.ForeignKey('Users', db_column='updated_by', related_name='updated_by_contacts_set', blank=True, null=True)
     next_milestone = models.IntegerField(blank=True, null=True)
     addr_certified = models.BooleanField()
     contract_id = models.IntegerField()
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', related_name='cashier_created_contacts_set', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', related_name='cashier_updated_contacts_set', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='cashier_created_contacts_set',
+        blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='cashier_updated_contacts_set',
+        blank=True, null=True)
     fully_covered = models.NullBooleanField()
     birthday = models.DateField(blank=True, null=True)
     volunteer_intern_title = models.CharField(max_length=255, blank=True, null=True)
@@ -296,9 +300,11 @@ class Disbursements(models.Model):
     created_by = models.IntegerField()
     updated_by = models.IntegerField(blank=True, null=True)
     cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
-        related_name='created_by_disbursements_set', blank=True, null=True)
+        related_name='cashier_created_by_disbursements_set',
+        blank=True, null=True)
     cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
-        related_name='updated_by_disbursements_set', blank=True, null=True)
+        related_name='cashier_updated_by_disbursements_set',
+        blank=True, null=True)
     adjustment = models.BooleanField()
 
     class Meta:
@@ -331,12 +337,14 @@ class DisciplinaryActions(models.Model):
     disabled = models.BooleanField()
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by', blank=True, null=True)
+    updated_by = models.ForeignKey('Users', db_column='updated_by', related_name='updated_by_diciplinaryactions_set', blank=True, null=True)
+    created_by = models.ForeignKey('Users', db_column='created_by', related_name='created_by_diciplinaryactions_set', blank=True, null=True)
     cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
-        related_name='created_by_diciplinaryactions_set', blank=True, null=True)
+        related_name='cashier_created_by_diciplinaryactions_set',
+        blank=True, null=True)
     cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
-        related_name='updated_by_diciplinaryactions_set',  blank=True, null=True)
+        related_name='cashier_updated_by_diciplinaryactions_set',
+        blank=True, null=True)
 
     class Meta:
         managed = False
@@ -429,9 +437,11 @@ class Donations(models.Model):
     invoice_resolved_at = models.DateTimeField(blank=True, null=True)
     contract_id = models.IntegerField()
     cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
-        related_name='cashier_created_by_donations_set',blank=True, null=True)
+        related_name='cashier_created_by_donations_set',
+        blank=True, null=True)
     cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
-        related_name='cashier_updated_by_donations_set', blank=True, null=True)
+        related_name='cashier_updated_by_donations_set',
+        blank=True, null=True)
     adjustment = models.BooleanField()
     occurred_at = models.DateTimeField()
     is_pickup = models.BooleanField()
@@ -541,8 +551,12 @@ class GizmoReturns(models.Model):
     updated_by = models.IntegerField(blank=True, null=True)
     storecredit_difference_cents = models.IntegerField(blank=True, null=True)
     comments = models.TextField(blank=True, null=True)
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='cashier_created_by_gizmoreturns_set',
+        blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='cashier_updated_by_gizmoreturns_set',
+        blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
     adjustment = models.BooleanField()
@@ -870,8 +884,12 @@ class Recyclings(models.Model):
     needs_attention = models.BooleanField()
     created_by = models.IntegerField()
     updated_by = models.IntegerField(blank=True, null=True)
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='cashier_created_by_recyclings_set',
+        blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='cashier_updated_by_recyclings_set',
+        blank=True, null=True)
     adjustment = models.BooleanField()
 
     class Meta:
@@ -1055,14 +1073,21 @@ class Sales(models.Model):
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by')
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey('Users', db_column='created_by',
+        related_name='created_by_sales_set')
+    updated_by = models.ForeignKey('Users', db_column='updated_by',
+        related_name='updated_by_sales_set',
+        blank=True, null=True)
     reported_discount_amount_cents = models.IntegerField(blank=True, null=True)
     reported_amount_due_cents = models.IntegerField(blank=True, null=True)
     needs_attention = models.BooleanField()
     invoice_resolved_at = models.DateTimeField(blank=True, null=True)
-    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by', blank=True, null=True)
+    cashier_created_by = models.ForeignKey('Users', db_column='cashier_created_by',
+        related_name='cashier_created_by_sales_set',
+        blank=True, null=True)
+    cashier_updated_by = models.ForeignKey('Users', db_column='cashier_updated_by',
+        related_name='cashier_updated_by_sales_set',
+        blank=True, null=True)
     adjustment = models.BooleanField()
     occurred_at = models.DateTimeField()
     sale_type_id = models.IntegerField()
@@ -1149,8 +1174,12 @@ class Shifts(models.Model):
     actual = models.NullBooleanField()
     training = models.NullBooleanField()
     proposed = models.BooleanField()
-    created_by = models.ForeignKey('Users', db_column='created_by', blank=True, null=True)
-    updated_by = models.ForeignKey('Users', db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey('Users', db_column='created_by',
+        related_name='created_by_shifts_set',
+        blank=True, null=True)
+    updated_by = models.ForeignKey('Users', db_column='updated_by',
+        related_name='updated_by_shifts_set',
+        blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
     week_1_of_month = models.BooleanField()
@@ -1362,8 +1391,10 @@ class Types(models.Model):
     lock_version = models.IntegerField()
     updated_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
-    created_by = models.ForeignKey('Users', db_column='created_by')
-    updated_by = models.ForeignKey('Users', db_column='updated_by')
+    created_by = models.ForeignKey('Users', db_column='created_by',
+        related_name='created_by_types_set')
+    updated_by = models.ForeignKey('Users', db_column='updated_by',
+        related_name='updated_by_types_set')
     name = models.CharField(unique=True, max_length=40)
     gizmo_type_id = models.IntegerField(blank=True, null=True)
     active = models.BooleanField()
@@ -1383,8 +1414,11 @@ class Users(models.Model):
     remember_token = models.CharField(max_length=255, blank=True, null=True)
     remember_token_expires_at = models.DateTimeField(blank=True, null=True)
     contact_id = models.IntegerField(blank=True, null=True)
-    created_by = models.ForeignKey('self', db_column='created_by')
-    updated_by = models.ForeignKey('self', db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey('self', db_column='created_by',
+        related_name='created_by_users_set')
+    updated_by = models.ForeignKey('self', db_column='updated_by',
+        related_name='updated_by_users_set',
+        blank=True, null=True)
     cashier_code = models.IntegerField(blank=True, null=True)
     can_login = models.BooleanField()
     last_logged_in = models.DateField(blank=True, null=True)
@@ -1403,8 +1437,12 @@ class Vacations(models.Model):
     start_time = models.TimeField(blank=True, null=True)
     end_time = models.TimeField(blank=True, null=True)
     worker = models.ForeignKey('Workers', blank=True, null=True)
-    created_by = models.ForeignKey(Users, db_column='created_by', blank=True, null=True)
-    updated_by = models.ForeignKey(Users, db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey(Users, db_column='created_by',
+        related_name='created_by_vacations_set',
+        blank=True, null=True)
+    updated_by = models.ForeignKey(Users, db_column='updated_by',
+        related_name='updated_by_vacations_set',
+        blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
 
@@ -1510,10 +1548,17 @@ class VolunteerTasks(models.Model):
     community_service_type_id = models.IntegerField(blank=True, null=True)
     volunteer_task_type = models.ForeignKey(VolunteerTaskTypes, blank=True, null=True)
     date_performed = models.DateField(blank=True, null=True)
-    created_by = models.ForeignKey(Users, db_column='created_by')
-    updated_by = models.ForeignKey(Users, db_column='updated_by', blank=True, null=True)
-    cashier_created_by = models.ForeignKey(Users, db_column='cashier_created_by', blank=True, null=True)
-    cashier_updated_by = models.ForeignKey(Users, db_column='cashier_updated_by', blank=True, null=True)
+    created_by = models.ForeignKey(Users, db_column='created_by',
+        related_name='created_by_volunteertasks_set')
+    updated_by = models.ForeignKey(Users, db_column='updated_by',
+        related_name='updated_by_volunteertasks_set',
+        blank=True, null=True)
+    cashier_created_by = models.ForeignKey(Users, db_column='cashier_created_by',
+        related_name='cashier_created_by_volunteertasks_set',
+        blank=True, null=True)
+    cashier_updated_by = models.ForeignKey(Users, db_column='cashier_updated_by',
+        related_name='cashier_updated_by_volunteertasks_set',
+        blank=True, null=True)
     program_id = models.IntegerField()
 
     class Meta:
@@ -1594,8 +1639,12 @@ class WorkShifts(models.Model):
     actual = models.NullBooleanField()
     training = models.NullBooleanField()
     proposed = models.NullBooleanField()
-    created_by = models.ForeignKey(Users, db_column='created_by', blank=True, null=True)
-    updated_by = models.ForeignKey(Users, db_column='updated_by', blank=True, null=True)
+    created_by = models.ForeignKey(Users, db_column='created_by',
+        related_name='created_by_workshifts_set',
+        blank=True, null=True)
+    updated_by = models.ForeignKey(Users, db_column='updated_by',
+        related_name='updated_by_workshifts_set',
+        blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
     offsite = models.BooleanField()
