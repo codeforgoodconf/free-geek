@@ -14,7 +14,7 @@ link_suffix = ''
 # register some admin interface managers for each app in the app_names list
 for app_name in apps_to_admin:
     app = apps.get_app_config(app_name)
-    for model_name, Model in app.models.iteritems():
+    for model_name, Model in app.models.items():
         if model_name in excluded_models:
             continue
 
