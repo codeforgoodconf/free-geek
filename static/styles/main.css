@@ -1,8 +1,32 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100vw;
+}
+
+.nat-img-size{
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+   min-height: 11vh;
+   min-width: 11vw;
+}
+
 #nav {
     width: 100%;
     background-color: green;
+    min-height: 1em;
 }
 
+#nav-list{
+    display: flex;
+    justify-content: space-around;
+}
 
 #nav li {
     display: inline;

@@ -1,9 +1,10 @@
 from django.db import models
+from django.forms import ModelForm
 from django.contrib import admin
 import datetime
 from django.utils import timezone
 from django.core.validators import RegexValidator
-from django.contrib.auth.models import User, UserManager
+from django.contrib.auth.models import User, UserManager, AbstractUser
 from django.forms import ValidationError
 from . import settings
 
@@ -14,9 +15,6 @@ DEFAULT_TIME = datetime.time(hour=12)
 phoneValidator = RegexValidator(
     regex=r'[0-9][0-9 ]+',
     message='Not a valid phone number')
-
-
-from models_old import *
 
 
 class StaffManager(UserManager):

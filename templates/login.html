@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+    <form id="login_form" action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label> Username</label>
+    <br>
+    <input type="text" name="username">
+
+    <label>Password</label>
+    <br>
+    <input type="password" name="password">
+    <button type="submit">Login!</button><p>Not a user? Register <a href="{% url 'register' %}"><b>here</b></a></p>
+    </form>
+{% endblock %}

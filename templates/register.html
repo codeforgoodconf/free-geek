@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'scripts/register_scripts.js' %}"></script>
+<form id="register-form" action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+
+   {% csrf_token %}
+
+    <b>Username</b><br>
+    <input id="form_username" type="text" name="username"><br>
+
+    <b>Email Address</b><br>
+    <input type="email" name="email"><br>
+
+    <br><b>Password</b><br>
+    <input type="password" name="password" id="password"><br>
+
+    <b>Re-enter Password</b><br>
+    <input type="password" name="passwordcheck" id="password_check"><br>
+
+    <button type="submit" disabled="disabled">Register</button>
+
+</form>
+
+    <button onclick="checkBothPasswords()">test button baby!</button>
+
+{% endblock %}
