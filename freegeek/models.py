@@ -15,7 +15,7 @@ phoneValidator = RegexValidator(
     regex=r'[0-9][0-9 ]+',
     message='Not a valid phone number')
 
-from models_old import *
+#from models_old import *
 
 class ProfileManager(UserManager):
     """ only users with the staff level can add and modify Profiles """
@@ -181,6 +181,24 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+def create_location(location_name):
+    """Create a location.
+    
+    Check that location does not already exist.
+    """
+    if not location_name:
+        raise ValueError('Location must have a name.')
+    num_location_objects = Location.objects.filter(name=location_name).count()
+    if(num_location_objects >= 1):
+        validation_error_string = ("%s instances of Location with name %s were found, require 0." % (str(num_location_objects), location_name))
+        raise ValidationError(validation_error_string)
+    
+    location = Location(
+        name=location_name,
+        )
+    location.save()
+    return location
+    
 
 class Station(models.Model):
     """Station model.
@@ -193,7 +211,36 @@ class Station(models.Model):
 
     def __str__(self):
         return self.name
-
+    
+def create_station(station_name, location_name):
+    """Create a station.
+    
+    Check that location with name==location already exists.
+    Check that station with name==name and location.name==location does not already exist.
+    """
+    
+    if not station_name:
+        raise ValueError('Station must have a name.')
+    if not location_name:
+        raise ValueError('Station must have a location.')
+    
+    num_location_objects = Location.objects.filter(name=location_name).count()
+    if(num_location_objects != 1):
+        validation_error_string = ("%s instances of location with name %s were found, require 1." % (str(num_location_objects), location_name))
+        raise ValidationError(validation_error_string)
+    
+    num_station_objects = Station.objects.filter(name=station_name,location__name=location_name).count()
+    if(num_station_objects >= 1):
+        validation_error_string = ("%s instances of station with name %s were found, require 0." % (str(num_station_objects), station_name))
+        raise ValidationError(validation_error_string)
+    
+    station = Station(
+        name=station_name,
+        location=Location.objects.get(name=location_name),
+        )
+    station.save()
+    return station
+        
 
 class Appointment(models.Model):
     """Appointment model.
@@ -256,40 +303,48 @@ class Appointment(models.Model):
         return appointment_string
 
 
-def create_appointment(start_time, end_time, station, proficiency):
-    """Create an appointment
+    def create_appointment(start_time, end_time, station_name, location_name, proficiency):
+        """Create an appointment
+        
+        Would be nice to check whether the appointment is at the same time as other
+        appointments, and confirm whether overlapping appointments are intentional.
+        
+        Creating multiple appointments with a single action would be nice, but
+        that will probably be taken care of in views.
+        """
+        if not start_time:
+            raise ValueError('Appointment must have a start_time.')
+        if not end_time:
+            raise ValueError('Appointment must have an end_time.')
+        if not station_name:
+            raise ValueError('Appointment must have a station_name.')
+        if not location_name:
+            raise ValueError('Appointment must have a location_name.')
+        if not proficiency:
+            raise ValueError('Appointment must have a proficiency.')
+        
+        if (start_time > end_time):
+            raise ValidationError('Start time must come before end time.')
+        
+        num_station_objects = Station.objects.filter(name=station_name,location__name=location_name).count()
+        if(num_station_objects != 1):
+            validation_error_string = ("%s instances of station with name %s, location %s, were found, require 1." % 
+                                       (str(num_station_objects), station_name, location_name))
+            raise ValidationError(validation_error_string)
+        
+        appointment = Appointment(
+            start_time=start_time,
+            end_time=end_time,
+            station=Station.objects.get(name=station_name,location__name=location_name),
+            proficiency=proficiency,
+            filled=False,
+            profile=None,
+            )
+        appointment.save()
+        return appointment
+    
 
-    Would be nice to check whether the appointment is at the same time as other
-    appointments, and confirm whether overlapping appointments are intentional.
-
-    Creating multiple appointments with a single action would be nice, but
-    that will probably be taken care of in views.
-    """
-    if not start_time:
-        raise ValueError('Appointment must have a start_time.')
-    if not end_time:
-        raise ValueError('Appointment must have an end_time.')
-    if not station:
-        raise ValueError('Appointment must have a station.')
-    if not proficiency:
-        raise ValueError('Appointment must have a proficiency.')
-
-    if (start_time > end_time):
-        raise ValidationError('Start time must come before end time.')
-
-    appointment = self.model(
-        start_time=start_time,
-        end_time=end_time,
-        station=station,
-        proficiency=proficiency,
-        filled=False,
-        profile=None,
-        )
-    appointment.save()
-    return appointment
-
-
-# This could be a member function of Appointment instead
+# This could be a member function of Appointment and/or Profile instead
 def assign_profile_to_appointment(profile, appointment):
     """Assign a profile to an appointment.
 
