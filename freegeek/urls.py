@@ -23,6 +23,8 @@ from diary import urls as diary_urls
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'customers', views.CustomerViewSet, base_name='customers')
@@ -31,10 +33,14 @@ router.register(r'treatments', views.TreatmentViewSet, base_name='treatments')
 router.register(r'entries', views.EntryViewSet, base_name='entries')
 
 urlpatterns = [
-    url(r'^$', views.home),
+    url(r'^$', views.home, name='home'),
     url(r'^api/', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^register/?$', views.register, name='register'),
+    url(r'^profile_page/(?P<mbr>[-\w\D]+)/?$', views.profile_page, name='profile_page'),
+    url(r'login/?', views.log_in, name='login'),
+    url(r'logout/?', views.logout_view, name='logout'),
     url(r'^accounts/login/$', django.contrib.auth.views.login),
     url(r'^accounts/logout/$',
         django.contrib.auth.views.logout,
@@ -53,4 +59,4 @@ urlpatterns = [
         django.contrib.auth.views.password_reset_complete),
     url(r'^diary/', include(diary_urls.urlpatterns, namespace='diary')),
     url(r'^diary/?', views.diary, name="diary_home")
-    ]
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

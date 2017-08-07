@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+<link type="text/css" rel="stylesheet" href="{% static 'styles/profile_styles.css' %}">
+{% block content %}
+
+    <div id="greeting">
+    {% if user.is_authenticated %}
+        <h1 align="center">Welcome {{ user.username }}</h1>
+    {% else %}
+        <h1 align="center">This is not your page. Go home.</h1>
+    {% endif %}
+    </div>
+
+{% endblock %}

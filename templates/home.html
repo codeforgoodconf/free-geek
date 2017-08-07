@@ -1,8 +1,16 @@
 {% extends "layout.html" %}
-{% load staticfiles %}
+{% load static %}
 
 {% block title %} Free Geek {% endblock %}
 
 {% block content %}
-    <img src="{% static 'fglogo.png' %}" alt="free geek logo" id="fg-logo">
+    <div id="logo">
+    <img class="nat-img-size" src="{% static 'images/fglogo.png' %}" alt="free geek logo" id="fg-logo">
+    </div>
+    {% if user.is_authenticated %}
+        <h4><a href="{% url 'profile_page' user.username %}">{{ user.username }}'s Profile</a></h4>
+        <h4><a href="{% url 'logout' %}">logout</a></h4>
+    {% else %}
+    <h4><a href="{% url 'login' %}">login/register</a></h4>
+    {% endif %}
 {% endblock %}

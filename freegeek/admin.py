@@ -1,4 +1,8 @@
 from django.contrib import admin
+from .models import Profile
+
+# Register your models here.
+admin.site.register(Profile)
 from django.apps import apps
 from django import forms
 

@@ -1,9 +1,10 @@
 from django.db import models
+from django.forms import ModelForm
 from django.contrib import admin
 import datetime
 from django.utils import timezone
 from django.core.validators import RegexValidator
-from django.contrib.auth.models import User, UserManager
+from django.contrib.auth.models import User, UserManager, AbstractUser
 from django.forms import ValidationError
 from . import settings
 
@@ -18,7 +19,7 @@ phoneValidator = RegexValidator(
 from .models_old import *
 
 class ProfileManager(UserManager):
-    """ only users with the staff level can add and modify Profiles """
+    """ Staff model Manager to allow only staff to modify Profiles"""
     
     def get_by_natural_key(self, username):
         """
