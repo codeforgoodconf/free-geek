@@ -15,7 +15,7 @@ phoneValidator = RegexValidator(
     regex=r'[0-9][0-9 ]+',
     message='Not a valid phone number')
 
-from models_old import *
+from .models_old import *
 
 class ProfileManager(UserManager):
     """ only users with the staff level can add and modify Profiles """
