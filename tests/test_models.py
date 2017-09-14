@@ -17,9 +17,9 @@ class AppointmentTestCase(TestCase):
         """
         location1 = create_location(location_name = 'Location 1')
         station1 = create_station(station_name = 'Station 1', location_name = 'Location 1')
-        appointment1 = Appointment.create_appointment(start_time = '2017-07-31 09:15', end_time = '2017-07-31 11:15', proficiency = 'Skill 1', station_name = 'Station 1', location_name = 'Location 1')
-        appointment = Appointment.objects.get(start_time = '2017-07-31 09:15', end_time = '2017-07-31 11:15', proficiency = 'Skill 1', station__name = 'Station 1', station__location__name = 'Location 1')
-        num_appointment_objects = Appointment.objects.filter(start_time = '2017-07-31 09:15', end_time = '2017-07-31 11:15', proficiency = 'Skill 1', station__name = 'Station 1', station__location__name = 'Location 1').count()
+        appointment1 = Appointment.create_appointment(start_time = '2017-07-31 09:15-0800', end_time = '2017-07-31 11:15-0800', proficiency = 'Skill 1', station_name = 'Station 1', location_name = 'Location 1')
+        appointment = Appointment.objects.get(start_time = '2017-07-31 09:15-0800', end_time = '2017-07-31 11:15-0800', proficiency = 'Skill 1', station__name = 'Station 1', station__location__name = 'Location 1')
+        num_appointment_objects = Appointment.objects.filter(start_time = '2017-07-31 09:15-0800', end_time = '2017-07-31 11:15-0800', proficiency = 'Skill 1', station__name = 'Station 1', station__location__name = 'Location 1').count()
         self.assertEqual(num_appointment_objects, 1)
 
 
