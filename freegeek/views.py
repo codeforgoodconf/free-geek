@@ -83,30 +83,13 @@ from django.http import HttpResponse
 from django.http import Http404
 from django.template import loader
 
-class LocationIndexView(generic.ListView):
-    template_name = 'freegeek/location_index.html'
+class IndexView(generic.ListView):
+    template_name = 'freegeek/index.html'
     context_object_name = 'location_list'
 
     def get_queryset(self):
         """Return the list of Locations."""
         return Location.objects.order_by('name')
-
-class StationIndexView(generic.ListView):
-    template_name = 'freegeek/station_index.html'
-    context_object_name = 'station_list'
-
-    def get_queryset(self):
-        """Return the list of Stations."""
-        return Station.objects.order_by('name')
-
-class IndexView(TemplateView):
-    template_name = 'freegeek/index.html'
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(IndexView, self).get_context_data(*args, **kwargs)
-        context['location_list'] = Location.objects.order_by('name')
-        context['station_list'] = Station.objects.order_by('name')
-        return context
 
 
 class LocationDetailView(generic.DetailView):

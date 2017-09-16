@@ -54,3 +54,8 @@ local_settings.py
 # development db tables
 *.sqlite
 *.sqlite*
+
+freegeek/migrations.HIDE
+freegeek/migrations
+tests/test_definition.py
+freegeek/views.py.NEW
