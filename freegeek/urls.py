@@ -52,5 +52,12 @@ urlpatterns = [
     url(r'^accounts/password/done/$',
         django.contrib.auth.views.password_reset_complete),
     url(r'^diary/', include(diary_urls.urlpatterns, namespace='diary')),
-    url(r'^diary/?', views.diary, name="diary_home")
+    url(r'^diary/?', views.diary, name="diary_home"),
+    url(r'^testview/station/$', views.StationIndexView.as_view(), name='stationindex'),
+    url(r'^testview/location/$', views.LocationIndexView.as_view(), name='locationindex'),
+    url(r'^testview/(?P<slug>[\w\-]+)/$', views.LocationDetailView.as_view(), 
+        name='locationdetail'),
+    url(r'^testview/(?P<locationslug>[\w\-]+)/(?P<slug>[\w\-]+)/$', views.StationDetailView.as_view(), 
+        name='stationdetail'),
+    url(r'^testview/$', views.IndexView.as_view(), name='index'),
     ]

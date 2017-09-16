@@ -1,0 +1,23 @@
+from django.shortcuts import get_object_or_404, render
+from django.utils import timezone
+
+# Create your views here.
+
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.views import generic
+
+from .models import *
+
+# need the following imports for current form of "results"
+from django.http import HttpResponse
+from django.http import Http404
+from django.template import loader
+
+class StationIndexView(generic.ListView):
+    template_name = 'station_index.html'
+    context_object_name = 'station_list'
+
+    def get_queryset(self):
+        """Return the list of Stations."""
+        return Station.objects.order_by('name')

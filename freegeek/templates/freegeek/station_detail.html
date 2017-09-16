@@ -1,0 +1,20 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'freegeek/style.css' %}" />
+
+{% if error_message %}<p><strong>{{ error_message|linebreaks }}</strong></p>{% endif %}
+
+{% if appointment_list %}
+    <ul>
+    {% for appointment in appointment_list %}
+        <li>Appointment scheduled from {{ appointment.start_time }} to {{ appointment.start_time }} 
+	  {% if appointment.filled %}
+	  - FILLED BY {{appointment.profile.first_name}} {{appointment.profile.last_name}}. </li>
+	  {% else %}
+	  - NOT FILLED.
+	  {% endif %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No appointments at station "{{station.name}}" (yet).</p>
+{% endif %}

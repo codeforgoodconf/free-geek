@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'freegeek/style.css' %}" />
+
+{% if error_message %}<p><strong>{{ error_message|linebreaks }}</strong></p>{% endif %}
+
+{% if station_list %}
+    <ul>
+    {% for station in station_list %}
+        <li><a href="{% url 'stationdetail' location.name station.name %}">Station "{{station.name}}" at Location "{{location.name}}"</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No stations at location "{{location.name}}" (yet).</p>
+{% endif %}
