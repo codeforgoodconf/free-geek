@@ -280,8 +280,11 @@ class Appointment(models.Model):
     # Do not check here whether they have same Station
     # This can be done separately (e.g. when iterating through all appointments)
     def __eq__(self, other):
-        """Determine if Appointments overlap
+        """
+        This overrides the "=" operator.
+        Determine if Appointments overlap.
         NOTE: time period end time is non-inclusive.
+        
         """
         if (self.end_time <= other.start_time):
             return False
@@ -290,8 +293,11 @@ class Appointment(models.Model):
         return True
 
     def __str__(self):
-        """Recast Appointment as string which gives a summary of the Appointment.
+        """
+
+        Recast Appointment as string which gives a summary of the Appointment.
         This includes start_time, end_time, station, location, and proficiency.
+        
         """
         filled_string = 'unfilled'
         if self.filled:
@@ -304,7 +310,7 @@ class Appointment(models.Model):
 
 
     def create_appointment(start_time, end_time, station_name, location_name, proficiency):
-        """Create an appointment
+        """Create an appointment.
         
         Would be nice to check whether the appointment is at the same time as other
         appointments, and confirm whether overlapping appointments are intentional.
@@ -348,8 +354,11 @@ class Appointment(models.Model):
 def assign_profile_to_appointment(profile, appointment):
     """Assign a profile to an appointment.
 
-    Need to check that appointment is not already filled.
-    Need to check that profile has the correct proficiency level.
+    Check that appointment is not already filled.
+    Check that profile has the correct proficiency level.
+
+    NEED TO DO: Check whether Profile is already assigned to an Appointment,
+    forbid (or notify and confirm) double-booking of Profiles.
     """
 
     if (appointment.filled):
