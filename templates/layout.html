@@ -12,7 +12,7 @@
   <div id="nav">
       <ul id="nav-list">
           <li> <a href="/"> Home </a></li>
-          <li> <a href="diary/home.html"> Calendar</a></li>
+          <li> <a href="/diary/home.html"> Calendar</a></li>
           {% if user.is_authenticated %}
           <li> <a href="{% url 'profile_page' user.username %}">{{ user.username }}'s Profile</a></li>
           {% endif %}
