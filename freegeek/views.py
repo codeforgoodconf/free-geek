@@ -95,7 +95,7 @@ def register(request):
         except Profile.DoesNotExist:
             user.save()
         else:
-            return render(request, 'register.html', {'username_error':'Username exists.'})
+            return render(request, 'register.html', {'username_error':('Username %s exists.' % username)})
 
         usr = authenticate(username=username, password=password)
 
