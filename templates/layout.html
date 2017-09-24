@@ -1,21 +1,26 @@
-{% load static from static %}
-{% load staticfiles %}
+{% load static %}
 
 
 <!doctype html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <script type="text/javascript" href="{% static 'scripts/register_scripts.js' %}"></script>
     <title>{% block title %} Free Geek {% endblock %}</title>
 </head>
 <body>
   <div id="nav">
-      <ul>
+      <ul id="nav-list">
           <li> <a href="/"> Home </a></li>
-          <li> <a href="/diary"> Calendar</a></li>
+          <li> <a href="/diary/home.html"> Calendar</a></li>
+          {% if user.is_authenticated %}
+          <li> <a href="{% url 'profile_page' user.username %}">{{ user.username }}'s Profile</a></li>
+          {% endif %}
       </ul>
   </div>
+  <div id="wrapper">
   {%  block content %}
   {%  endblock %}
+  </div>
 </body>
 </html>

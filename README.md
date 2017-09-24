@@ -33,7 +33,7 @@ After changes are made in markdown files run these from the level of free-geek f
 ```bash
 $ python freegeek/convert_docs.py
 $ python freegeek/link_fix.py
-$ python manage.py docs
+$ python setup.py docs
 ```
 These commands:
 
@@ -43,10 +43,46 @@ These commands:
 
 Pandoc is required to convert the files. [Installation](http://pandoc.org/installing.html) is OS dependent.
 
-# Testing 
+#### Generating documentation automatically. 
+
+It is possible to add the above python scripts to pre-commit hooks. Changes will not be commited, but they are generated for the next commit/push. 
+
+Please follow the "Adding flake8 into a pre-commit hook" for instructions on pre-commit hook, and use this script instead.
+
+```
+#!/bin/sh
+
+flake8 .
+python freegeek/convert_docs.py
+python freegeek/link_fix.py
+python setup.py docs
+
+exit 0
+```
+It is possible to further automate the generation by adding git commands to the bash script. It is hover not reccomended to auto commit to git, thus it is left from the instructions.
+
+## Testing 
 
 ```shell
     pip install -r test-requirements.txt
 ```
+## Adding flake8 into a pre-commit hook
 
+1. Open the hidden `.git` folder inside free-geek folder
+2. Open the `hook` folder.
+3. You are now in `free-geek/.git/hooks/`.
+4. Create a file `pre-commit`. No extensions.
+5. Write this into the file:
 
+```bash
+#!/bin/sh
+
+flake8 .
+
+exit 0
+```
+5. Make the file executable: `chmod +x pre-commit`
+
+Commits must be executed in the terminal, not GUI. 
+
+Now before every commit flake8 will run and display the output into terminal window. It will not prevent the commit. 

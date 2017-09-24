@@ -1,8 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from diary.models import Customer, Resource, Treatment, Entry
+from .models import Profile
 from rest_framework import viewsets
 from .serializers import CustomerSerializer, ResourceSerializer, TreatmentSerializer, EntrySerializer
 
+from django import forms
 
 def home(request):
     return render(request, 'home.html')
@@ -64,3 +68,79 @@ class EntryViewSet(viewsets.ModelViewSet):
     # You can filter results or order of queryset by modifying the queryset variable
     queryset = Entry.objects.all()
     serializer_class = EntrySerializer
+
+
+def register(request):
+    """
+    INPUT: a request
+    USAGE: Instantiates and attaches appropriate attributes to user object
+    OUTPUT: N/A
+    """
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+
+        user = Profile()
+
+        user.username = username
+        user.email = email
+        
+        user.set_password(password)
+
+        # If attempt is made to register a Profile with a username that already exists,
+        # reload the page with an error message.
+        try:
+            Profile.objects.get(username = username)
+        except Profile.DoesNotExist:
+            user.save()
+        else:
+            return render(request, 'register.html', {'username_error':('Username %s exists.' % username)})
+
+        usr = authenticate(username=username, password=password)
+
+        if usr is not None:
+            login(request, usr)
+        return HttpResponseRedirect('/')
+
+    return render(request, 'register.html', {})
+
+
+
+def profile_page(request, mbr):
+    """
+    INPUT: a user object
+    USAGE: to render out the profile page with the user as ontext
+    OUTPUT: a rendered profile page
+    """
+    user = Profile.objects.get(username=mbr)
+    context_dict = {'user': user}
+    return render(request, 'profile_page.html', context_dict)
+
+
+def log_in(request):
+    """
+    INPUT: a request
+    USAGE: to log in the correct user if credentials are valid
+    OUTPUT: a rendered profile page if successful else, login page
+    """
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/profile_page/' + str(user.username))
+    return render(request, 'login.html', {})
+
+
+def logout_view(request):
+    """
+    INPUT: a request
+    USAGE: to logout the current user
+    OUTPUT: a rendered home page
+    """
+
+    logout(request)
+    return HttpResponseRedirect('/')

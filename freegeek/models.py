@@ -1,9 +1,10 @@
 from django.db import models
+from django.forms import ModelForm
 from django.contrib import admin
 import datetime
 from django.utils import timezone
 from django.core.validators import RegexValidator
-from django.contrib.auth.models import User, UserManager
+from django.contrib.auth.models import User, UserManager, AbstractUser
 from django.forms import ValidationError
 from . import settings
 
@@ -15,10 +16,10 @@ phoneValidator = RegexValidator(
     regex=r'[0-9][0-9 ]+',
     message='Not a valid phone number')
 
-# from models_old import *
+from .models_old import *
 
 class ProfileManager(UserManager):
-    """ only users with the staff level can add and modify Profiles """
+    """ Staff model Manager to allow only staff to modify Profiles"""
     
     def get_by_natural_key(self, username):
         """
@@ -248,7 +249,6 @@ class Appointment(models.Model):
         """
         filled_string = 'unfilled'
         if self.filled:
-
             filled_string = 'filled by %s %s' % (self.profile.first_name, self.profile.last_name)
         appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." % 
                               (str(self.start_time), str(self.end_time),
