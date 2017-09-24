@@ -6,6 +6,7 @@ from .models import Profile
 from rest_framework import viewsets
 from .serializers import CustomerSerializer, ResourceSerializer, TreatmentSerializer, EntrySerializer
 
+from django import forms
 
 def home(request):
     return render(request, 'home.html')
@@ -84,11 +85,20 @@ def register(request):
 
         user.username = username
         user.email = email
+        
         user.set_password(password)
 
-        user.save()
+        # If attempt is made to register a Profile with a username that already exists,
+        # reload the page with an error message.
+        try:
+            Profile.objects.get(username = username)
+        except Profile.DoesNotExist:
+            user.save()
+        else:
+            return render(request, 'register.html', {'username_error':('Username %s exists.' % username)})
 
         usr = authenticate(username=username, password=password)
+
         if usr is not None:
             login(request, usr)
         return HttpResponseRedirect('/')

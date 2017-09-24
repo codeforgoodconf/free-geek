@@ -9,6 +9,7 @@
 
     <b>Username</b><br>
     <input id="form_username" type="text" name="username"><br>
+    <div style=""> {{ username_error }} </div> <br>
 
     <b>Email Address</b><br>
     <input type="email" name="email"><br>
@@ -18,6 +19,8 @@
 
     <b>Re-enter Password</b><br>
     <input onKeyUp="checkBothPasswords()" type="password" name="passwordcheck" id="password_check"><br>
+
+    <div id="password_error"> </div> <br>
 
     <button type="submit" disabled="disabled" id="register_button">Register</button>
 
