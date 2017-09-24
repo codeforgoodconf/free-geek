@@ -1,10 +1,24 @@
 from django.contrib import admin
-from .models import Profile
-
-# Register your models here.
-admin.site.register(Profile)
+from .models import Shift, Worker, Role, Profile
 from django.apps import apps
 from django import forms
+
+class ShiftAdmin(admin.ModelAdmin):
+    pass
+
+
+class WorkerAdmin(admin.ModelAdmin):
+    pass
+
+
+class RoleAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Shift, ShiftAdmin)
+admin.site.register(Worker, WorkerAdmin)
+admin.site.register(Role, RoleAdmin)
+admin.site.register(Profile)
+
 
 excluded_models = []
 unsearchable_field_types = ['ForeignKey', 'OneToOneField', 'TimeField', 'DateTimeField', 'DateField', 'AutoField']
