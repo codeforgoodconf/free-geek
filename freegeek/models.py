@@ -251,7 +251,7 @@ class Appointment(models.Model):
         filled_string = 'unfilled'
         if self.filled:
             filled_string = 'filled by %s %s' % (self.profile.first_name, self.profile.last_name)
-        appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." % 
+        appointment_string = ("From %s to %s at %s in %s requires proficiency %s, currently %s." %
                               (str(self.start_time), str(self.end_time),
                                str(self.station), str(self.station.location),
                                self.proficiency, filled_string))

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'freegeek',
     'diary',
     'datetimewidget',
+    'django_seed',
 ]
 
 MIDDLEWARE_CLASSES = [

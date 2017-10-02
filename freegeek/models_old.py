@@ -1323,7 +1323,7 @@ class FGUser(models.Model):
     remember_token_expires_at = models.DateTimeField(blank=True, null=True)
     contact_id = models.IntegerField(blank=True, null=True)
     created_by = models.ForeignKey('self', db_column='created_by',
-        related_name='created_by_users_set')
+        related_name='created_by_users_set', blank=True, null=True)
     updated_by = models.ForeignKey('self', db_column='updated_by',
         related_name='updated_by_users_set',
         blank=True, null=True)
@@ -1377,7 +1377,7 @@ class VolunteerDefaultShift(models.Model):
     roster_id = models.IntegerField()
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
-    volunteer_default_event = models.ForeignKey(VolunteerDefaultEvent)
+    volunteer_default_event = models.ForeignKey(VolunteerDefaultEvent, null=True)
     class_credit = models.NullBooleanField()
     description = models.CharField(max_length=255, blank=True, null=True)
     program_id = models.IntegerField(blank=True, null=True)
