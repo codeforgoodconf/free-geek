@@ -1,47 +1,38 @@
-#wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    width: 100vw;
+* {
+    box-sizing: border-box;
 }
 
-.nat-img-size{
-    height: 100%;
-    width: 100%;
-}
-
-#logo{
-   min-height: 11vh;
-   min-width: 11vw;
-}
 
 #nav {
-    width: 100%;
-    background-color: green;
     min-height: 1em;
+    height: 70px;
+    border-radius: 5px;
+    margin: 4px;
 }
 
-#nav-list{
-    display: flex;
-    justify-content: space-around;
+.navbar-header, .navbar-brand {
+    padding: 0 10px;
+    height: 68px;
 }
 
-#nav li {
-    display: inline;
+.navbar-inverse {
+    background-color: #000;
 }
 
-#nav a {
-    color: white;
-    text-decoration: none;
+.navbar-brand img {
+    margin: 0;
+    height: 68px;
+    border-radius: 5px 0 0 5px;
 }
 
-#nav a:visited {
-    color: white;
-    text-decoration: none;
+.nav.navbar-nav li a {
+    height: 68px;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 22px 15px;
 }
-
-#nav a:hover {
-    text-decoration: underline;
+.nav.navbar-nav li:hover {
+    background-color: #444;
+    color: #fff;
 }

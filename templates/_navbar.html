@@ -1,0 +1,24 @@
+{% load static %}
+
+ <nav id="nav" class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img alt="Brand" src="{% static "images/logo.svg" %}">
+            </a>
+        </div>
+        <ul id="nav-list" class="nav navbar-nav">
+            <li> <a href="{% url 'home' %}"> Home </a></li>
+            <li> <a href="{% url 'diary_home' %}">Diary</a></li>
+        </ul>
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+                <li> <a href="{% url 'profile_page' user.username %}">{{ user.username }}'s Profile</a></li>
+                <li> <a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li> <a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
