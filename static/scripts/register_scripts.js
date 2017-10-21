@@ -10,12 +10,12 @@ function checkBothPasswords() {
     document.getElementById('register_button').disabled = false;
     document.getElementById('password_error').innerHTML='';
     if (pWordOne !== pWordTwo) {
-    document.getElementById('register_button').disabled = true;
-    document.getElementById('password_error').innerHTML += 'Passwords must be equal.<br>';
+	document.getElementById('register_button').disabled = true;
+	document.getElementById('password_error').innerHTML += 'Passwords must be equal.<br>';
     }
     if (pWordOne.length < 5) {
-    document.getElementById('register_button').disabled = true;
-    document.getElementById('password_error').innerHTML +=('Password must be at least 5 chasfearacters.<br>');
+	document.getElementById('register_button').disabled = true;
+	document.getElementById('password_error').innerHTML +=('Password must be at least 5 chasfearacters.<br>');
     }
 
 }
