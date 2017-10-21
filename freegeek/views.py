@@ -5,6 +5,7 @@ from diary.models import Customer, Resource, Treatment, Entry
 from .models import Profile
 from rest_framework import viewsets
 from .serializers import CustomerSerializer, ResourceSerializer, TreatmentSerializer, EntrySerializer
+from django.http import HttpResponse
 
 from django import forms
 
@@ -153,7 +154,7 @@ def check_if_username_exists(request):
         proposed_username = request.POST.get('proposed_username')
 
         try:
-            Profile.objects.get(username = username)
+            Profile.objects.get(username = proposed_username)
         except Profile.DoesNotExist:
             response_data = {"username_exists":"Great, that username is available!"}
         else:

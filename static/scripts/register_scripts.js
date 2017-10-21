@@ -32,11 +32,11 @@ function check_if_username_exists() {
                 // handle a successful response
                 success : function(json) {
                     console.log(json); // log the returned json to the console
-                    $("#username_error").val(json.username_exists) // for now, show True/False if username does/does not exist in database already
+                    $("#username_error").html(json.username_exists) // for now, show True/False if username does/does not exist in database already
                     console.log("Should have set username_error to True/False by now.") // so we know to look for it
                 },
                 error : function(xhr,errmsg,err) {
-                    $("#username_error").val(errmsg);
+                    $("#username_error").html(errmsg);
                     console.log(xhr.status + ": " + xhr.responseText); // more error info for the console 
                 }
     });
