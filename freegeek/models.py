@@ -335,6 +335,9 @@ def unassign_appointment(appointment):
     return True
 
 
+# Everything below is copied/derived from models_old.probably
+# There are some problems with migrations because >1 models correspond to a db name
+
 class Shift(models.Model):
     type = models.CharField(max_length=255, blank=True, null=True)
     start_time = models.TimeField(blank=True, null=True)
