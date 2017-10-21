@@ -155,9 +155,9 @@ def check_if_username_exists(request):
         try:
             Profile.objects.get(username = username)
         except Profile.DoesNotExist:
-            response_data = {"username_exists":"False"}
+            response_data = {"username_exists":"Great, that username is available!"}
         else:
-            response_data = {"username_exists":"True"}
+            response_data = {"username_exists":"Sorry, that username is already in use."}
         return HttpResponse(
             json.dumps(response_data),
             content_type="application/json"
