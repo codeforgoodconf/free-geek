@@ -910,7 +910,7 @@ class RolesFGUser(models.Model):
     role_id = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        db_table = 'roles_users'
+        db_table = 'roles_FGUsers'
 
 
 class Roster(models.Model):
