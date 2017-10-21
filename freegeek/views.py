@@ -8,6 +8,8 @@ from .serializers import CustomerSerializer, ResourceSerializer, TreatmentSerial
 
 from django import forms
 
+import json
+
 def home(request):
     return render(request, 'home.html')
 
@@ -144,3 +146,26 @@ def logout_view(request):
 
     logout(request)
     return HttpResponseRedirect('/')
+
+
+def check_if_username_exists(request):
+    if request.method == 'POST':
+        proposed_username = request.POST.get('proposed_username')
+
+        try:
+            Profile.objects.get(username = username)
+        except Profile.DoesNotExist:
+            response_data = {"username_exists":"False"}
+        else:
+            response_data = {"username_exists":"True"}
+        return HttpResponse(
+            json.dumps(response_data),
+            content_type="application/json"
+        )
+    else:
+       return HttpResponse(
+            json.dumps({"error": "request.method was not POST"}),
+            content_type="application/json"
+        )
+
+

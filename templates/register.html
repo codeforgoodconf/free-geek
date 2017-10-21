@@ -2,14 +2,15 @@
 {% load static %}
 
 {% block content %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'scripts/register_scripts.js' %}"></script>
 <form id="register-form" action="{% url 'register' %}" method="post" enctype="multipart/form-data">
 
    {% csrf_token %}
 
     <b>Username</b><br>
-    <input id="form_username" type="text" name="username"><br>
-    <div style=""> {{ username_error }} </div> <br>
+    <input type="text" name="username" id="form_username"><br>
+    <div id = "username_error" style=""> {{ username_error }} </div> <br>
 
     <b>Email Address</b><br>
     <input type="email" name="email"><br>

@@ -38,6 +38,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^register/?$', views.register, name='register'),
+    url(r'^check_if_username_exists/$', views.check_if_username_exists, name='check_if_username_exists'),
     url(r'^profile_page/(?P<mbr>[-\w\D]+)/?$', views.profile_page, name='profile_page'),
     url(r'login/?', views.log_in, name='login'),
     url(r'logout/?', views.logout_view, name='logout'),
