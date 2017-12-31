@@ -14,6 +14,7 @@ __pycache__/*
 \#*
 .~*
 *.bak
+.DS_Store
 
 # Project files
 .ropeproject
@@ -41,6 +42,7 @@ coverage.xml
 build/*
 dist/*
 sdist/*
+docs/*rst
 docs/api/*
 docs/_build/*
 cover/*
@@ -54,3 +56,6 @@ local_settings.py
 # development db tables
 *.sqlite
 *.sqlite*
+
+# migrations
+freegeek/migrations/
