@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from freegeek.models import Program, Roster
+from freegeek.models import Program, Contact, Roster
 
 
 class VolunteerTaskType(models.Model):
@@ -100,3 +100,23 @@ class VolunteerShift(models.Model):
 
     class Meta:
         db_table = 'volunteer_shifts'
+
+
+class Assignment(models.Model):
+    start_time = models.TimeField(blank=True, null=True)
+    end_time = models.TimeField(blank=True, null=True)
+    notes = models.TextField(blank=True, null=True)
+    closed = models.BooleanField()
+    lock_version = models.IntegerField()
+
+    created_at = models.DateTimeField(blank=True, null=True, auto_now_add=True)
+    updated_at = models.DateTimeField(blank=True, null=True, auto_now=True)
+
+    call_status_type_id = models.IntegerField(blank=True, null=True)
+    attendance_type_id = models.IntegerField(blank=True, null=True)
+
+    contact = models.ForeignKey(Contact, on_delete=models.DO_NOTHING)
+    volunteer_shift = models.ForeignKey(VolunteerShift, on_delete=models.DO_NOTHING)
+
+    class Meta:
+        db_table = 'assignments'
