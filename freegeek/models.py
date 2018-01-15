@@ -38,6 +38,9 @@ class Program(models.Model):
     volunteer = models.BooleanField()
     adoption_credit = models.BooleanField()
 
+    def __str__(self):
+        return self.description if self.description else self.name
+
     class Meta:
         db_table = 'programs'
 
@@ -49,6 +52,9 @@ class Roster(models.Model):
     contact_type_id = models.IntegerField(blank=True, null=True)
     restrict_to_every_n_days = models.IntegerField(blank=True, null=True)
     restrict_from_sked_id = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name if self.name else "[no name provided]"
 
     class Meta:
         db_table = 'rosters'

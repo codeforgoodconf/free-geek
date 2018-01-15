@@ -1,0 +1,151 @@
+[{
+  "model": "freegeek.program",
+  "pk": 1,
+  "fields": {
+    "name": "adoption",
+    "description": "Volunteering",
+    "volunteer": true,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 2,
+  "fields": {
+    "name": "build",
+    "description": "Build",
+    "volunteer": false,
+    "adoption_credit": false
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 3,
+  "fields": {
+    "name": "altbuild",
+    "description": "Advanced Build",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 4,
+  "fields": {
+    "name": "reuse",
+    "description": "Reuse & E-Waste Diversion",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 5,
+  "fields": {
+    "name": "access",
+    "description": "Internet Access",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 7,
+  "fields": {
+    "name": "fundraising",
+    "description": "Fundraising",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 8,
+  "fields": {
+    "name": "overhead",
+    "description": "Overhead",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 9,
+  "fields": {
+    "name": "intern",
+    "description": "Internships and Job Training",
+    "volunteer": true,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 10,
+  "fields": {
+    "name": "mixed",
+    "description": "Mixed",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 11,
+  "fields": {
+    "name": "recycling",
+    "description": "Recycling",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 12,
+  "fields": {
+    "name": "spanish",
+    "description": "Spanish Build",
+    "volunteer": false,
+    "adoption_credit": false
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 14,
+  "fields": {
+    "name": "education",
+    "description": "Education",
+    "volunteer": true,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 15,
+  "fields": {
+    "name": "replication",
+    "description": "Replication",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 16,
+  "fields": {
+    "name": "volunteer",
+    "description": "Volunteer & Community Service",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}, {
+  "model": "freegeek.program",
+  "pk": 17,
+  "fields": {
+    "name": "n/a",
+    "description": "Not Applicable",
+    "volunteer": false,
+    "adoption_credit": true
+  }
+
+}]

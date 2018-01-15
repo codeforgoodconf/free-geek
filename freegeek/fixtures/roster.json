@@ -1,0 +1,272 @@
+[
+  {
+    "pk": 4,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Hardware ID",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 5,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "System Evaluation",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 6,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Build Workshops",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 7,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Laptop",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 8,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Mac",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 9,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Spanish Build",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 10,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Server Build",
+      "enabled": false,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 11,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Receiving (replaced with Sorting)",
+      "enabled": false,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 12,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Recycling",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 13,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Printerland",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 14,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Misc Adoption",
+      "enabled": true,
+      "limit_shift_signup_by_program": true
+    }
+  },
+  {
+    "pk": 15,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Reuse Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 16,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Getting Started Classes",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 17,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Command Line",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 18,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Monthly Classes",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 19,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Testing",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 21,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Tech Support Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 22,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Front Desk Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 23,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Recycling Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 24,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Thrift Store Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 25,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Receiving Interns (replaced with Sorting)",
+      "enabled": false,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 26,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Printers Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 27,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Hardware Grants Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 29,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Build Instructors",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 32,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Sandbox",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 33,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Sorting Interns",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 34,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Sorting",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 35,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "Misc",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 36,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "A/V",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  },
+  {
+    "pk": 37,
+    "model": "freegeek.roster",
+    "fields": {
+      "name": "",
+      "enabled": true,
+      "limit_shift_signup_by_program": false
+    }
+  }
+]
