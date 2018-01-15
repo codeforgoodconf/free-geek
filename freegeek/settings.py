@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'freegeek',
+    'scheduling',
 ]
 
 MIDDLEWARE = [
@@ -124,4 +125,5 @@ STATIC_URL = '/static/'
 try:
     from local_settings import *
 except ImportError:
+    print('ERROR')
     pass
