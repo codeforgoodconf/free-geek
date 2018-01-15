@@ -15,6 +15,9 @@ class VolunteerTaskType(models.Model):
 
     program = models.ForeignKey(Program, on_delete=models.DO_NOTHING)
 
+    def __str__(self):
+        return self.description.title() if self.description else self.name.title()
+
     class Meta:
         db_table = 'volunteer_task_types'
 

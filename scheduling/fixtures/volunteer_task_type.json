@@ -1,0 +1,632 @@
+[
+  {
+    "pk": 21,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "quality_control",
+      "description": "quality control",
+      "program_id": 2,
+      "hours_multiplier": 1,
+      "instantiable": false,
+      "lock_version": 3,
+      "effective_on": null,
+      "ineffective_on": "2013-01-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 22,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "monitors",
+      "description": "monitors",
+      "program_id": 1,
+      "hours_multiplier": 2,
+      "instantiable": true,
+      "lock_version": 3,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 23,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "cleaning",
+      "description": "cleaning",
+      "program_id": 1,
+      "hours_multiplier": 2,
+      "instantiable": true,
+      "lock_version": 3,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 25,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "evaluation",
+      "description": "evaluation",
+      "program_id": 2,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 26,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "assembly",
+      "description": "desktops",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": true
+    }
+  },
+  {
+    "pk": 28,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "receiving",
+      "description": "receiving",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2013-05-14 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 29,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "recycling",
+      "description": "recycling",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 30,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "teaching",
+      "description": "teaching",
+      "program_id": 14,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 31,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "massage",
+      "description": "massage",
+      "program_id": 10,
+      "hours_multiplier": 4,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 32,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "slacking",
+      "description": "slacking",
+      "program_id": 8,
+      "hours_multiplier": 0,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 33,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "admin",
+      "description": "admin",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 34,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "advanced_testing",
+      "description": "advanced testing",
+      "program_id": 3,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 3,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 35,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "computers_for_kids",
+      "description": "computers for kids",
+      "program_id": 10,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 36,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "cream",
+      "description": "CREAM",
+      "program_id": 10,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 37,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "data_entry",
+      "description": "data entry",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 38,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "education",
+      "description": "education",
+      "program_id": 14,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 39,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "server",
+      "description": "server",
+      "program_id": 3,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 4,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 40,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "front_desk",
+      "description": "front desk",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 41,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "laptops",
+      "description": "laptops",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 4,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": true
+    }
+  },
+  {
+    "pk": 42,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "misc",
+      "description": "misc",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 43,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "orientation",
+      "description": "orientation",
+      "program_id": 10,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 44,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "outreach",
+      "description": "outreach",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 45,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "printers",
+      "description": "printers",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 46,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "programming",
+      "description": "programming",
+      "program_id": 10,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 47,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "repair",
+      "description": "repair",
+      "program_id": 2,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 48,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "sales",
+      "description": "sales",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 49,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "hardware_id",
+      "description": "hardware id",
+      "program_id": 2,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 50,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "support",
+      "description": "tech support",
+      "program_id": 14,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 3,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 51,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "system_administration",
+      "description": "system administration",
+      "program_id": 10,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 52,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "testing",
+      "description": "testing",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 2,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 53,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "macintosh",
+      "description": "macintosh",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 54,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "case management",
+      "description": "case management",
+      "program_id": 2,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 55,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "cleaning",
+      "description": "cleaning",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 3,
+      "effective_on": "2009-10-02 00:00:00",
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 56,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "monitors",
+      "description": "monitors",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 3,
+      "effective_on": "2009-10-02 00:00:00",
+      "ineffective_on": "2011-07-31 00:00:00",
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 57,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "av",
+      "description": "A/V",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 4,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": true
+    }
+  },
+  {
+    "pk": 58,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "library",
+      "description": "Library",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": false,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 59,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "hardware_grants",
+      "description": "grants",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 1,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 60,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "plug_into_portland",
+      "description": "plug into portland",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 0,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 61,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "board",
+      "description": "board work",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 0,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 62,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "facilities",
+      "description": "facilities",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": false,
+      "lock_version": 0,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": null
+    }
+  },
+  {
+    "pk": 63,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "sorting",
+      "description": "sorting",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 0,
+      "effective_on": null,
+      "ineffective_on": null,
+      "adoption_credit": true
+    }
+  },
+  {
+    "pk": 64,
+    "model": "scheduling.VolunteerTaskType",
+    "fields": {
+      "name": "laptop_prebuild",
+      "description": "laptop prebuild",
+      "program_id": 1,
+      "hours_multiplier": 1,
+      "instantiable": true,
+      "lock_version": 0,
+      "effective_on": null,
+      "ineffective_on": "2016-10-01 00:00:00",
+      "adoption_credit": true
+    }
+  }
+]
