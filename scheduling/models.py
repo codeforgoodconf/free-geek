@@ -72,9 +72,31 @@ class VolunteerDefaultShift(models.Model):
     ineffective_on = models.DateField(blank=True, null=True)
 
     program = models.ForeignKey(Program, on_delete=models.DO_NOTHING)
-    roster = models.ForeignKey(Roster, blank=True, null=True, on_delete=models.DO_NOTHING)
+    roster = models.ForeignKey(Roster, on_delete=models.DO_NOTHING)
     volunteer_task_type = models.ForeignKey(VolunteerTaskType, null=True, on_delete=models.DO_NOTHING)
     volunteer_default_event = models.ForeignKey(VolunteerDefaultEvent, blank=True, null=True, on_delete=models.DO_NOTHING)
 
     class Meta:
         db_table = 'volunteer_default_shifts'
+
+
+class VolunteerShift(models.Model):
+    description = models.CharField(max_length=255, blank=True, null=True)
+    start_time = models.TimeField(blank=True, null=True)
+    end_time = models.TimeField(blank=True, null=True)
+    slot_number = models.IntegerField(blank=True, null=True)
+    class_credit = models.NullBooleanField()
+    not_numbered = models.BooleanField()
+    stuck_to_assignment = models.BooleanField()
+
+    created_at = models.DateTimeField(blank=True, null=True, auto_now_add=True)
+    updated_at = models.DateTimeField(blank=True, null=True, auto_now=True)
+
+    program = models.ForeignKey(Program, on_delete=models.DO_NOTHING)
+    roster = models.ForeignKey(Roster, on_delete=models.DO_NOTHING)
+    volunteer_task_type = models.ForeignKey(VolunteerTaskType, blank=True, null=True, on_delete=models.DO_NOTHING)
+    volunteer_event = models.ForeignKey(VolunteerEvent, on_delete=models.DO_NOTHING)
+    volunteer_default_shift = models.ForeignKey(VolunteerDefaultShift, blank=True, null=True, on_delete=models.DO_NOTHING)
+
+    class Meta:
+        db_table = 'volunteer_shifts'
