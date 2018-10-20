@@ -1,4 +1,4 @@
-# Note: Branch Master is currently out of date. Please checkout branch Delevop for current info. 
+# Note: Master branch is currently out of date. Please checkout Delevop branch for current info. 
 
 # free-geek
 
