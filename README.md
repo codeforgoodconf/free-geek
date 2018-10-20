@@ -8,7 +8,7 @@ A [Code for Good] (http://codeforgood.io/) project.
 
 We abide by the [Free Geek volunteer Code of Conduct] (https://www.freegeek.org/sites/default/files/2017-09/FreeGeek_CodeOfConduct.pdf )
 
-##Requirements
+## Requirements
 
 - Docker 
 - Python 3 
@@ -17,7 +17,6 @@ We abide by the [Free Geek volunteer Code of Conduct] (https://www.freegeek.org/
 
 
 ## Getting Started
-=
 
 
 #### First time setup
