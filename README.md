@@ -1,3 +1,5 @@
+# Note: Branch Master is currently out of date. Please checkout branch Delevop for current info. 
+
 # free-geek
 
 Source code and documentation for the ["Code for Good" Conference](http://codeforgood.io/) (hackathon) for [Free Geek](http://www.freegeek.org/).
