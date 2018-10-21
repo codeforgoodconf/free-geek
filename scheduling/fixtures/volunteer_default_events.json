@@ -1,0 +1,3763 @@
+[{
+  "pk": 420,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:32:41.742239",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 421,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Misc Adoption",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:34:20.225238",
+    "updated_at": "2011-02-23 20:34:20.225238",
+    "notes": "No more than 4 hours cleaning per day.\r\nPeople doing monitor testing must be able to see colors and comfortably lift 50 lbs.\r\n",
+    "week": ""
+  }
+}, {
+  "pk": 391,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2011-02-23 20:20:46.798071",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 396,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:23:36.026315",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 397,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:23:54.096554",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 448,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops - Gateway Team",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2011-02-23 20:46:08.660278",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 455,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops - HP/Compaq Team",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2011-02-23 20:48:50.733812",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 441,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2011-02-23 20:42:38.420484",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 443,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2011-02-23 20:43:29.480997",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 423,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:37:08.1286",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 424,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Misc Adoption",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:34:20.225238",
+    "updated_at": "2011-02-23 20:37:08.198594",
+    "notes": "No more than 4 hours cleaning per day.\r\nPeople doing monitor testing must be able to see colors and comfortably lift 50 lbs.\r\n",
+    "week": ""
+  }
+}, {
+  "pk": 427,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:37:14.817925",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 428,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Misc Adoption",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:34:20.225238",
+    "updated_at": "2011-02-23 20:37:14.842879",
+    "notes": "No more than 4 hours cleaning per day.\r\nPeople doing monitor testing must be able to see colors and comfortably lift 50 lbs.\r\n",
+    "week": ""
+  }
+}, {
+  "pk": 432,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Misc Adoption",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:34:20.225238",
+    "updated_at": "2011-02-23 20:37:17.17618",
+    "notes": "No more than 4 hours cleaning per day.\r\nPeople doing monitor testing must be able to see colors and comfortably lift 50 lbs.\r\n",
+    "week": ""
+  }
+}, {
+  "pk": 435,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:37:19.284535",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 436,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Misc Adoption",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:34:20.225238",
+    "updated_at": "2011-02-23 20:37:19.349823",
+    "notes": "No more than 4 hours cleaning per day.\r\nPeople doing monitor testing must be able to see colors and comfortably lift 50 lbs.\r\n",
+    "week": ""
+  }
+}, {
+  "pk": 398,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2011-02-23 20:24:56.678184",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 400,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:24:56.834504",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 401,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:24:56.856721",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 403,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2011-02-23 20:25:08.389697",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 405,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:08.456276",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 406,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:08.478387",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 407,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:08.49171",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 408,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2011-02-23 20:25:10.733572",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 410,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:10.822761",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 411,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:10.876289",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 412,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:10.950016",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 415,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:14.000061",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 416,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-23 20:25:14.044917",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 466,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-02-26 12:31:01.174019",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 477,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Command Line",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:25:24.983337",
+    "updated_at": "2012-12-21 11:40:10.692613",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 475,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Getting Started",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2011-05-14 13:25:55.851273",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 473,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Linux Open Questions",
+    "weekday_id": "4",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2012-09-25 12:00:10.672778",
+    "notes": "Drop-ins allowed",
+    "week": "A"
+  }
+}, {
+  "pk": 461,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Server Build",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:53:32.179764",
+    "updated_at": "2011-06-22 15:18:19.073855",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 474,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Getting Started",
+    "weekday_id": "4",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2011-05-14 13:25:06.03461",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 478,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2012-11-13 14:55:42.185734",
+    "notes": "Volunteers should not be allowed to arrive late for Hardware ID shifts.",
+    "week": ""
+  }
+}, {
+  "pk": 409,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2012-10-05 16:05:09.681692",
+    "notes": "* FRIDAY MORNING PREBUILD IS A MAC SYS EVAL SHIFT !!! *",
+    "week": ""
+  }
+}, {
+  "pk": 438,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Spanish Build",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2013-01-11 16:08:23.5739",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 458,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-04-30 14:39:00.786817",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 480,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2011-05-07 11:53:47.421007",
+    "notes": "Volunteers should not be allowed to arrive late for Hardware ID shifts.",
+    "week": ""
+  }
+}, {
+  "pk": 484,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2012-11-13 15:12:20.160061",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 485,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Getting Started",
+    "weekday_id": "3",
+    "created_at": "2011-05-14 12:31:38.592028",
+    "updated_at": "2011-05-14 13:24:43.703138",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 402,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2013-10-05 14:06:09.724611",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 426,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Recycling",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:30:40.771683",
+    "updated_at": "2014-05-08 16:11:53.656603",
+    "notes": "BENCH: 4'7\" or taller; able to lift 30 pounds regularly; standing\r\nTABLE: No restrictions",
+    "week": ""
+  }
+}, {
+  "pk": 430,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Recycling",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:30:40.771683",
+    "updated_at": "2014-05-08 16:12:17.271893",
+    "notes": "BENCH: 4'7\" or taller; able to lift 30 pounds regularly; standing\r\nTABLE: No restrictions",
+    "week": ""
+  }
+}, {
+  "pk": 434,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Recycling",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:30:40.771683",
+    "updated_at": "2014-05-08 16:12:33.515086",
+    "notes": "BENCH: 4'7\" or taller; able to lift 30 pounds regularly; standing\r\nTABLE: No restrictions",
+    "week": ""
+  }
+}, {
+  "pk": 446,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2015-10-06 15:26:50.753074",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 440,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2014-01-31 12:09:12.817867",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 442,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2016-02-04 14:30:50.883407",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 464,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2016-02-06 15:09:09.099325",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 457,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 10:39:29.613986",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 463,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2013-10-31 10:41:11.099131",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 439,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2015-10-06 15:29:17.997261",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 460,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Spanish Build",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2015-12-19 10:33:09.242106",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 459,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2015-09-25 10:30:44.300295",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 404,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2014-02-18 14:23:21.201114",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 413,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2014-02-18 14:26:54.615328",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 482,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2016-01-28 11:48:31.923075",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 422,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Recycling",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:30:40.771683",
+    "updated_at": "2014-05-08 16:11:38.424667",
+    "notes": "BENCH: 4'7\" or taller; able to lift 30 pounds regularly; standing\r\nTABLE: No restrictions",
+    "week": ""
+  }
+}, {
+  "pk": 481,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2015-02-20 16:34:43.296412",
+    "notes": "Volunteers should not be allowed to arrive late for Hardware ID shifts.",
+    "week": ""
+  }
+}, {
+  "pk": 399,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2015-03-06 16:15:41.843662",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 462,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Server Build",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:53:32.179764",
+    "updated_at": "2015-09-25 10:50:27.000989",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 465,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2016-02-06 15:10:33.756262",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 449,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-05-26 14:01:33.069292",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 451,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops - Sony Team",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-05-26 14:01:57.276661",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 456,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:24:35.865576",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 450,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-05-26 14:03:07.477229",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 453,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-05-26 14:09:03.995759",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 454,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:25:12.709003",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 452,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:23:25.187562",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 486,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:37:19.284535",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 487,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:37:19.284535",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 647,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-07-02 12:24:40.039118",
+    "updated_at": "2015-07-02 12:24:40.039118",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 444,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-12-12 11:16:52.827409",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 447,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-12-12 11:17:55.498058",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 488,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Printerland",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:32:41.742239",
+    "updated_at": "2011-02-23 20:37:19.284535",
+    "notes": "Nothing after the end time without instructor permission.",
+    "week": ""
+  }
+}, {
+  "pk": 656,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-07-16 15:08:13.899567",
+    "updated_at": "2015-07-16 15:08:13.899567",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 490,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2011-02-23 20:51:12.136552",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 496,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2011-02-23 20:50:52.575773",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 504,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #20",
+    "weekday_id": "2",
+    "created_at": "2011-09-28 12:28:24.902008",
+    "updated_at": "2011-09-28 12:28:24.902008",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 509,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2011-02-23 20:42:18.278347",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 510,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2011-02-23 20:43:18.673927",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 514,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Getting Started",
+    "weekday_id": "3",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2011-05-14 13:25:06.03461",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 515,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "6",
+    "created_at": "2011-10-01 10:58:40.514198",
+    "updated_at": "2011-10-14 15:26:13.005281",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 524,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #26",
+    "weekday_id": "3",
+    "created_at": "2011-10-22 16:29:07.995872",
+    "updated_at": "2011-10-22 16:29:07.995872",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 528,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #26",
+    "weekday_id": "5",
+    "created_at": "2011-10-22 16:36:28.759304",
+    "updated_at": "2011-10-22 16:36:28.759304",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 516,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "2",
+    "created_at": "2011-10-14 15:29:37.054635",
+    "updated_at": "2011-12-06 10:35:45.305512",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 530,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #25",
+    "weekday_id": "2",
+    "created_at": "2011-12-15 17:20:20.382354",
+    "updated_at": "2011-12-15 17:20:20.382354",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 517,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "3",
+    "created_at": "2011-10-21 12:39:40.233077",
+    "updated_at": "2012-01-03 12:24:22.034921",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 518,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "4",
+    "created_at": "2011-10-21 12:40:01.737282",
+    "updated_at": "2012-01-03 12:24:34.933143",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 519,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "5",
+    "created_at": "2011-10-21 12:40:11.904735",
+    "updated_at": "2012-01-03 12:25:23.565124",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 511,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "6",
+    "created_at": "2011-10-01 10:58:40.514199",
+    "updated_at": "2012-01-03 12:26:06.735898",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 533,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #29",
+    "weekday_id": "2",
+    "created_at": "2012-01-14 16:43:56.113777",
+    "updated_at": "2012-01-14 16:43:56.113777",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 536,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #6",
+    "weekday_id": "4",
+    "created_at": "2012-01-14 16:53:59.133847",
+    "updated_at": "2012-01-14 16:53:59.133847",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 543,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #27",
+    "weekday_id": "5",
+    "created_at": "2012-01-25 17:23:44.535542",
+    "updated_at": "2012-01-25 17:23:44.535542",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 544,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #27",
+    "weekday_id": "6",
+    "created_at": "2012-01-25 17:24:10.741125",
+    "updated_at": "2012-01-25 17:24:10.741125",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 545,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "4",
+    "created_at": "2011-10-21 12:40:01.737282",
+    "updated_at": "2012-01-03 12:24:34.933143",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 546,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "2",
+    "created_at": "2011-10-21 12:39:40.233077",
+    "updated_at": "2012-01-03 12:24:22.034921",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 547,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "2",
+    "created_at": "2011-10-01 10:58:40.514198",
+    "updated_at": "2012-01-03 12:26:06.735898",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 506,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "5",
+    "created_at": "2011-09-28 12:33:42.986797",
+    "updated_at": "2012-02-22 12:48:13.422621",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 508,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "3",
+    "created_at": "2011-09-28 12:35:26.295563",
+    "updated_at": "2012-03-22 15:35:02.699408",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 505,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "4",
+    "created_at": "2011-09-28 12:33:35.617588",
+    "updated_at": "2012-03-22 16:06:03.739003",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 535,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #6",
+    "weekday_id": "3",
+    "created_at": "2012-01-14 16:50:19.329564",
+    "updated_at": "2012-03-31 11:01:29.463045",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 537,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #6",
+    "weekday_id": "5",
+    "created_at": "2012-01-14 16:56:28.539613",
+    "updated_at": "2012-03-31 11:02:04.767191",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 534,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #6",
+    "weekday_id": "2",
+    "created_at": "2012-01-14 16:46:30.788455",
+    "updated_at": "2012-03-31 11:05:40.410949",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 542,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #27",
+    "weekday_id": "3",
+    "created_at": "2012-01-25 17:22:28.17936",
+    "updated_at": "2012-04-07 14:25:54.500823",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 541,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #27",
+    "weekday_id": "2",
+    "created_at": "2012-01-25 17:19:04.187678",
+    "updated_at": "2012-04-07 14:40:15.132135",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 503,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "6",
+    "created_at": "2011-09-28 12:23:49.656134",
+    "updated_at": "2013-05-28 12:31:19.485431",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 507,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "6",
+    "created_at": "2011-09-28 12:34:48.481137",
+    "updated_at": "2012-04-07 16:59:20.389588",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 549,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "2",
+    "created_at": "2012-04-09 10:17:05.570472",
+    "updated_at": "2012-04-09 10:30:08.743948",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 554,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "4",
+    "created_at": "2011-10-21 12:39:40.233077",
+    "updated_at": "2012-01-03 12:24:22.034921",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 555,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "5",
+    "created_at": "2011-10-21 12:39:40.233077",
+    "updated_at": "2012-01-03 12:24:22.034921",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 556,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "4",
+    "created_at": "2011-10-21 12:39:40.233077",
+    "updated_at": "2012-01-03 12:24:22.034921",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 558,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #29",
+    "weekday_id": "3",
+    "created_at": "2012-04-18 14:22:57.141073",
+    "updated_at": "2012-04-18 14:22:57.141073",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 483,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2013-01-17 17:21:37.191838",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 501,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2012-04-20 12:41:30.131824",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 499,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2012-04-20 13:03:15.078463",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 525,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #23",
+    "weekday_id": "3",
+    "created_at": "2011-10-22 16:30:01.979381",
+    "updated_at": "2012-05-03 13:31:47.981834",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 552,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "2",
+    "created_at": "2012-04-09 10:17:05.570472",
+    "updated_at": "2012-05-04 12:43:42.457325",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 560,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "2",
+    "created_at": "2012-04-09 10:17:05.570472",
+    "updated_at": "2012-04-09 10:30:08.743948",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 553,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "3",
+    "created_at": "2012-04-09 10:17:05.570472",
+    "updated_at": "2012-05-04 12:47:58.815347",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 550,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "4",
+    "created_at": "2012-04-09 10:17:05.570472",
+    "updated_at": "2012-05-04 12:52:04.585179",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 551,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "5",
+    "created_at": "2012-04-09 10:17:05.570472",
+    "updated_at": "2012-05-04 12:55:20.154402",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 561,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #21",
+    "weekday_id": "6",
+    "created_at": "2012-05-04 12:57:40.226129",
+    "updated_at": "2012-05-04 12:59:46.138551",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 563,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #7",
+    "weekday_id": "6",
+    "created_at": "2012-06-27 14:23:38.860355",
+    "updated_at": "2012-06-27 14:25:41.534088",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 566,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sandbox Events",
+    "weekday_id": "5",
+    "created_at": "2012-06-29 20:55:15.538478",
+    "updated_at": "2012-06-29 20:55:15.538478",
+    "notes": "This event is for testing purposes and will not affect the actual volunteer schedule.",
+    "week": ""
+  }
+}, {
+  "pk": 569,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sandbox Events",
+    "weekday_id": "6",
+    "created_at": "2012-06-29 20:55:15.904523",
+    "updated_at": "2012-06-29 20:55:15.904523",
+    "notes": "This event is for testing purposes and will not affect the actual volunteer schedule.",
+    "week": ""
+  }
+}, {
+  "pk": 570,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sandbox Events",
+    "weekday_id": "3",
+    "created_at": "2012-06-29 20:55:15.983508",
+    "updated_at": "2012-06-29 20:55:15.983508",
+    "notes": "This event is for testing purposes and will not affect the actual volunteer schedule.",
+    "week": ""
+  }
+}, {
+  "pk": 526,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #26",
+    "weekday_id": "2",
+    "created_at": "2011-10-22 16:33:12.588905",
+    "updated_at": "2012-09-14 12:13:57.969001",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 559,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #27",
+    "weekday_id": "4",
+    "created_at": "2012-04-24 15:23:21.740233",
+    "updated_at": "2012-09-20 10:39:16.054674",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 527,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #26",
+    "weekday_id": "4",
+    "created_at": "2011-10-22 16:35:55.64884",
+    "updated_at": "2012-10-04 08:56:24.375218",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 568,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sandbox Events",
+    "weekday_id": "4",
+    "created_at": "2012-06-29 20:55:15.745746",
+    "updated_at": "2012-10-30 10:37:14.016293",
+    "notes": "This event is for testing purposes and will not affect the actual volunteer schedule.",
+    "week": ""
+  }
+}, {
+  "pk": 567,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sandbox Events",
+    "weekday_id": "3",
+    "created_at": "2012-06-29 20:55:15.667699",
+    "updated_at": "2012-10-30 10:36:19.75144",
+    "notes": "This event is for testing purposes and will not affect the actual volunteer schedule. adding text to notes",
+    "week": ""
+  }
+}, {
+  "pk": 562,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #33",
+    "weekday_id": "5",
+    "created_at": "2012-05-17 15:11:59.049823",
+    "updated_at": "2013-04-27 13:44:13.324795",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 522,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #23",
+    "weekday_id": "2",
+    "created_at": "2011-10-22 16:24:16.487805",
+    "updated_at": "2013-02-01 13:06:45.63019",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 523,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #23",
+    "weekday_id": "4",
+    "created_at": "2011-10-22 16:24:54.791835",
+    "updated_at": "2012-11-14 16:41:21.340383",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 521,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #23",
+    "weekday_id": "5",
+    "created_at": "2011-10-22 16:09:28.402602",
+    "updated_at": "2012-11-14 16:42:16.893565",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 531,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #33",
+    "weekday_id": "4",
+    "created_at": "2011-12-15 17:21:13.007926",
+    "updated_at": "2013-04-27 13:45:13.585296",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 565,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptop Eval Pilot",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2012-11-16 12:53:10.39908",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 529,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #33",
+    "weekday_id": "6",
+    "created_at": "2011-12-15 17:17:32.311673",
+    "updated_at": "2013-04-27 13:44:41.934129",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 491,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-04-30 11:32:28.576772",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 540,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #33",
+    "weekday_id": "3",
+    "created_at": "2012-01-17 14:07:37.072305",
+    "updated_at": "2013-04-27 13:42:46.232008",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 489,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-04-30 11:33:49.464084",
+    "notes": "NOTE  ** M A C  S H I F T S now start at 1 0 : 3 0 **",
+    "week": ""
+  }
+}, {
+  "pk": 539,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #29",
+    "weekday_id": "6",
+    "created_at": "2012-01-14 17:24:31.293612",
+    "updated_at": "2013-06-14 11:32:54.434799",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 538,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #6",
+    "weekday_id": "6",
+    "created_at": "2012-01-14 16:57:32.168122",
+    "updated_at": "2013-06-14 11:33:44.73901",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 425,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2012-11-21 13:22:24.305817",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 494,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 10:32:26.944482",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW INTERN PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 493,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 10:42:02.736915",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 500,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 13:51:30.865705",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 492,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 10:31:54.146386",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 495,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 10:43:47.554095",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 497,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Testing",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 10:45:01.570277",
+    "notes": "Need OK From Build Instructor\r\n\r\nDO NOT SCHEDULE MORE THAN ONE NEW PERSON PER SHIFT",
+    "week": ""
+  }
+}, {
+  "pk": 498,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-10-31 13:49:29.771502",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 520,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #23",
+    "weekday_id": "6",
+    "created_at": "2011-10-22 16:07:44.136136",
+    "updated_at": "2014-05-08 15:58:09.215972",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 548,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "6",
+    "created_at": "2012-02-11 13:08:10.728809",
+    "updated_at": "2014-07-16 12:34:06.126153",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 636,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #36",
+    "weekday_id": "3",
+    "created_at": "2015-02-19 03:32:54.440708",
+    "updated_at": "2015-02-19 03:32:54.440708",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 637,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #36",
+    "weekday_id": "2",
+    "created_at": "2015-02-19 03:32:56.783892",
+    "updated_at": "2015-02-19 03:32:56.783892",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 564,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:30:03.274428",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 512,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2012-12-06 15:09:35.312983",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 648,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "5",
+    "created_at": "2015-07-02 12:25:30.86367",
+    "updated_at": "2015-07-02 12:25:30.86367",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 649,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-07-02 12:26:03.309936",
+    "updated_at": "2015-07-02 12:26:03.309936",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 657,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-07-25 10:44:39.16231",
+    "updated_at": "2015-07-25 10:44:39.16231",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 658,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #12",
+    "weekday_id": "3",
+    "created_at": "2015-09-02 15:39:17.60219",
+    "updated_at": "2015-09-02 15:39:17.60219",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 659,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #12",
+    "weekday_id": "4",
+    "created_at": "2015-09-02 15:40:01.799828",
+    "updated_at": "2015-09-02 15:40:01.799828",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 418,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2012-12-06 15:11:32.9325",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 433,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2011-02-23 20:37:17.206297",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 437,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2011-02-23 20:37:19.372127",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 429,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2012-10-30 09:47:09.677158",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 596,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-04-30 14:29:01.275883",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 572,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Programming Jam",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2012-09-25 11:06:54.938051",
+    "notes": "Drop-ins allowed",
+    "week": "A"
+  }
+}, {
+  "pk": 576,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "4",
+    "created_at": "2012-10-02 14:54:20.176696",
+    "updated_at": "2012-10-02 14:54:20.176696",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 575,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "2",
+    "created_at": "2012-10-02 14:52:59.760618",
+    "updated_at": "2012-10-23 11:09:26.842961",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 578,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Peripheral Testing",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2012-11-02 14:21:59.454413",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 580,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Networking Study Group",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2013-01-08 09:58:32.527323",
+    "notes": "Long-term commitment & signup required",
+    "week": "B"
+  }
+}, {
+  "pk": 574,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #9",
+    "weekday_id": "6",
+    "created_at": "2012-09-29 12:12:24.802204",
+    "updated_at": "2013-01-11 16:21:10.069292",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 513,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Receiving",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:28:29.209293",
+    "updated_at": "2012-12-06 15:10:15.212677",
+    "notes": "Volunteers working for the first time should work a minimum of 2 hours for training and practice and please do not schedule first timers from 4p to 6p as there is only one staff member for training",
+    "week": ""
+  }
+}, {
+  "pk": 581,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #14",
+    "weekday_id": "2",
+    "created_at": "2013-03-22 17:11:00.617703",
+    "updated_at": "2013-03-22 17:11:00.617703",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 582,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #14",
+    "weekday_id": "3",
+    "created_at": "2013-03-22 17:42:06.502388",
+    "updated_at": "2013-03-22 17:42:06.502388",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 583,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #14",
+    "weekday_id": "4",
+    "created_at": "2013-03-22 17:42:33.899048",
+    "updated_at": "2013-03-22 17:42:33.899048",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 577,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "6",
+    "created_at": "2012-10-02 14:56:03.852737",
+    "updated_at": "2013-04-02 15:41:12.736193",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 584,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "5",
+    "created_at": "2012-10-02 14:56:03.852737",
+    "updated_at": "2013-04-02 15:41:12.736193",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 585,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "1",
+    "created_at": "2012-10-02 14:56:03.852737",
+    "updated_at": "2013-04-02 15:41:12.736193",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 586,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "2",
+    "created_at": "2012-10-02 14:56:03.852737",
+    "updated_at": "2013-04-02 15:41:12.736193",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 587,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "3",
+    "created_at": "2012-10-02 14:56:03.852737",
+    "updated_at": "2013-04-02 15:41:12.736193",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 588,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #24",
+    "weekday_id": "4",
+    "created_at": "2012-10-02 14:56:03.852737",
+    "updated_at": "2013-04-02 15:41:12.736193",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 595,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2013-04-30 14:28:14.951057",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 599,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA intern",
+    "weekday_id": "2",
+    "created_at": "2013-05-15 12:59:50.746039",
+    "updated_at": "2013-05-15 12:59:50.746039",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 601,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "4",
+    "created_at": "2011-09-28 12:35:26.295563",
+    "updated_at": "2012-03-22 15:35:02.699408",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 598,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "SDA Intern",
+    "weekday_id": "3",
+    "created_at": "2013-05-08 10:43:42.400967",
+    "updated_at": "2013-06-14 11:16:03.028294",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 603,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #4",
+    "weekday_id": "6",
+    "created_at": "2013-06-14 18:02:42.780019",
+    "updated_at": "2013-06-14 18:02:42.780019",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 604,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #33",
+    "weekday_id": "2",
+    "created_at": "2013-06-19 09:54:11.2808",
+    "updated_at": "2013-06-19 09:54:11.2808",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 605,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #8",
+    "weekday_id": "3",
+    "created_at": "2013-09-17 17:50:28.868619",
+    "updated_at": "2013-09-17 17:50:28.868619",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 479,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2013-10-05 14:10:55.344609",
+    "notes": "Volunteers should not be allowed to arrive late for Hardware ID shifts.",
+    "week": ""
+  }
+}, {
+  "pk": 573,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Using Linux Mint",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:25:24.983337",
+    "updated_at": "2014-09-25 10:24:24.252484",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 606,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "2",
+    "created_at": "2013-10-19 12:55:03.9998",
+    "updated_at": "2013-10-19 12:55:03.9998",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 612,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "2",
+    "created_at": "2011-09-28 12:35:26.295563",
+    "updated_at": "2012-03-22 15:35:02.699408",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 419,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Recycling",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:30:40.771683",
+    "updated_at": "2014-05-08 16:07:47.60112",
+    "notes": "BENCH: 4'7\" or taller; able to lift 30 pounds regularly; standing\r\nTABLE: No restrictions",
+    "week": ""
+  }
+}, {
+  "pk": 607,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #34",
+    "weekday_id": "6",
+    "created_at": "2013-10-23 09:50:19.424422",
+    "updated_at": "2013-10-25 13:41:09.45617",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 613,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "4",
+    "created_at": "2011-09-28 12:35:26.295563",
+    "updated_at": "2012-03-22 15:35:02.699408",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 608,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #29",
+    "weekday_id": "4",
+    "created_at": "2013-11-14 11:16:09.531708",
+    "updated_at": "2013-11-14 11:16:09.531708",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 614,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "5",
+    "created_at": "2011-09-28 12:35:26.295563",
+    "updated_at": "2012-03-22 15:35:02.699408",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 624,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #7",
+    "weekday_id": "5",
+    "created_at": "2014-05-16 14:46:27.256478",
+    "updated_at": "2014-05-16 14:46:27.256478",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 615,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #15",
+    "weekday_id": "6",
+    "created_at": "2011-09-28 12:35:26.295563",
+    "updated_at": "2012-03-22 15:35:02.699408",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 616,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #8",
+    "weekday_id": "2",
+    "created_at": "2014-01-08 09:26:20.845606",
+    "updated_at": "2014-01-08 09:26:20.845606",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 617,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #8",
+    "weekday_id": "4",
+    "created_at": "2014-01-08 09:27:09.036231",
+    "updated_at": "2014-01-08 09:27:09.036231",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 619,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #29",
+    "weekday_id": "5",
+    "created_at": "2014-01-08 09:43:46.384445",
+    "updated_at": "2014-01-08 09:43:46.384445",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 620,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #8",
+    "weekday_id": "6",
+    "created_at": "2014-01-08 09:55:38.251936",
+    "updated_at": "2014-01-08 09:55:38.251936",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 610,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #19",
+    "weekday_id": "3",
+    "created_at": "2014-01-02 16:16:23.581844",
+    "updated_at": "2014-03-14 13:55:44.917474",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 621,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #25",
+    "weekday_id": "6",
+    "created_at": "2014-02-13 09:45:36.699075",
+    "updated_at": "2014-02-13 09:45:36.699075",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 609,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #19",
+    "weekday_id": "2",
+    "created_at": "2014-01-02 16:15:58.671123",
+    "updated_at": "2014-03-14 13:53:21.230581",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 611,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #19",
+    "weekday_id": "4",
+    "created_at": "2014-01-02 16:16:56.167366",
+    "updated_at": "2014-03-14 13:56:46.27028",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 618,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #19",
+    "weekday_id": "5",
+    "created_at": "2014-01-08 09:42:16.6947",
+    "updated_at": "2014-03-14 13:57:25.380502",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 622,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #26",
+    "weekday_id": "6",
+    "created_at": "2014-03-15 12:42:14.584297",
+    "updated_at": "2014-03-15 12:42:14.584297",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 625,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2014-05-28 17:27:45.937482",
+    "updated_at": "2014-05-28 17:27:45.937482",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 626,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2014-05-28 17:57:19.03454",
+    "updated_at": "2014-05-28 17:57:19.03454",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 579,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:25:50.681727",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 623,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2014-05-02 15:43:32.074738",
+    "updated_at": "2014-05-02 15:43:32.074738",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 628,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #22",
+    "weekday_id": "0",
+    "created_at": "2014-08-15 13:26:04.570252",
+    "updated_at": "2014-08-15 13:26:04.570252",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 629,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginning Programming with Python",
+    "weekday_id": "6",
+    "created_at": "2015-01-02 17:57:41.681665",
+    "updated_at": "2015-01-02 18:02:53.254427",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 630,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginning Programming with Python",
+    "weekday_id": "6",
+    "created_at": "2015-01-03 10:21:10.152481",
+    "updated_at": "2015-01-03 10:21:10.152481",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 631,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #35",
+    "weekday_id": "2",
+    "created_at": "2015-01-09 13:47:04.574093",
+    "updated_at": "2015-01-09 13:47:04.574093",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 632,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #35",
+    "weekday_id": "3",
+    "created_at": "2015-01-09 13:48:01.864939",
+    "updated_at": "2015-01-09 13:48:01.864939",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 633,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #35",
+    "weekday_id": "4",
+    "created_at": "2015-01-09 13:48:57.225349",
+    "updated_at": "2015-01-09 13:48:57.225349",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 634,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:20:46.798071",
+    "updated_at": "2014-02-18 14:22:42.342223",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 635,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #36",
+    "weekday_id": "4",
+    "created_at": "2015-02-19 03:32:52.29205",
+    "updated_at": "2015-02-19 03:32:52.29205",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 600,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2015-04-04 13:07:45.612016",
+    "notes": "Volunteers should not be allowed to arrive late for Hardware ID shifts.",
+    "week": ""
+  }
+}, {
+  "pk": 571,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Command Line",
+    "weekday_id": "2",
+    "created_at": "2011-02-26 16:25:24.983337",
+    "updated_at": "2016-09-23 11:41:43.472723",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 395,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Hardware ID",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:23:22.689246",
+    "updated_at": "2015-02-20 16:32:50.364267",
+    "notes": "Volunteers should not be scheduled to arrive late for Hardware ID shifts.",
+    "week": ""
+  }
+}, {
+  "pk": 640,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-03-06 15:09:13.705049",
+    "updated_at": "2015-03-06 15:09:13.705049",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 638,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-02-20 16:35:45.173202",
+    "updated_at": "2015-05-08 16:34:56.930065",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 641,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "3",
+    "created_at": "2015-05-15 15:34:04.728383",
+    "updated_at": "2015-05-15 15:34:04.728383",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 642,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2015-05-21 17:37:41.26174",
+    "updated_at": "2015-05-21 17:37:41.26174",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 643,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-05-21 17:39:34.145409",
+    "updated_at": "2015-05-21 17:39:34.145409",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 644,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-06-16 10:47:12.521023",
+    "updated_at": "2015-06-16 10:47:12.521023",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 645,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2015-06-16 10:47:42.609379",
+    "updated_at": "2015-06-16 10:47:42.609379",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 646,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "5",
+    "created_at": "2015-07-02 12:20:41.337275",
+    "updated_at": "2015-07-02 12:20:41.337275",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 627,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2016-10-20 09:57:21.942688",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 602,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2016-10-20 09:57:33.475121",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 592,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sorting",
+    "weekday_id": "4",
+    "created_at": "2013-04-27 13:49:35.576458",
+    "updated_at": "2017-10-20 14:58:49.339967",
+    "notes": "SORTING and RUNNER:  First shift must begin at 10:00am or at 2:00pm, and be at least 2 hours+. Standing tasks only. \r\n\r\nRUNNER: Must have been in Sorting at least once before signing up. Regular lifting up to 50lbs.",
+    "week": ""
+  }
+}, {
+  "pk": 594,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sorting",
+    "weekday_id": "5",
+    "created_at": "2013-04-27 13:49:35.576458",
+    "updated_at": "2017-10-20 15:47:13.351285",
+    "notes": "SORTING and RUNNER:  First shift must begin at 10:00am or at 2:00pm, and be at least 2 hours+. Standing tasks only. \r\n\r\nRUNNER: Must have been in Sorting at least once before signing up. Regular lifting up to 50lbs.",
+    "week": ""
+  }
+}, {
+  "pk": 593,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sorting",
+    "weekday_id": "6",
+    "created_at": "2013-04-27 13:49:35.576458",
+    "updated_at": "2017-10-20 15:47:33.401867",
+    "notes": "SORTING and RUNNER:  First shift must begin at 10:00am or at 2:00pm, and be at least 2 hours+. Standing tasks only. \r\n\r\nRUNNER: Must have been in Sorting at least once before signing up. Regular lifting up to 50lbs.",
+    "week": ""
+  }
+}, {
+  "pk": 650,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2015-07-14 10:13:30.930392",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 651,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "3",
+    "created_at": "2015-07-14 10:14:34.14252",
+    "updated_at": "2015-07-14 10:14:34.14252",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 652,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-07-16 15:05:28.170675",
+    "updated_at": "2015-07-16 15:05:28.170675",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 653,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "3",
+    "created_at": "2015-07-16 15:06:37.095534",
+    "updated_at": "2015-07-16 15:06:37.095534",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 654,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2015-07-16 15:07:06.790478",
+    "updated_at": "2015-07-16 15:07:06.790478",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 655,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "5",
+    "created_at": "2015-07-16 15:07:44.905715",
+    "updated_at": "2015-07-16 15:07:44.905715",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 661,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #34",
+    "weekday_id": "2",
+    "created_at": "2015-09-29 16:59:34.826323",
+    "updated_at": "2015-09-29 16:59:34.826323",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 663,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-10-30 13:01:43.207398",
+    "updated_at": "2015-10-30 13:01:43.207398",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 664,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "3",
+    "created_at": "2015-10-30 13:02:36.533819",
+    "updated_at": "2015-10-30 13:02:36.533819",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 665,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2015-10-30 13:03:33.880792",
+    "updated_at": "2015-10-30 13:03:33.880792",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 666,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "5",
+    "created_at": "2015-10-30 13:04:10.63986",
+    "updated_at": "2015-10-30 13:04:10.63986",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 667,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-10-30 13:04:42.697616",
+    "updated_at": "2015-10-30 13:04:42.697616",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 668,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #23",
+    "weekday_id": "0",
+    "created_at": "2016-01-12 11:51:54.719611",
+    "updated_at": "2016-01-12 11:51:54.719611",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 639,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-03-06 15:05:04.757734",
+    "updated_at": "2016-01-28 11:50:16.971026",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 669,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #5",
+    "weekday_id": "2",
+    "created_at": "2016-02-06 12:49:45.907939",
+    "updated_at": "2016-02-06 12:49:45.907939",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 670,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #5",
+    "weekday_id": "4",
+    "created_at": "2016-02-06 13:04:12.572599",
+    "updated_at": "2016-02-06 13:04:12.572599",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 671,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #7",
+    "weekday_id": "2",
+    "created_at": "2016-03-10 13:21:18.584169",
+    "updated_at": "2016-03-10 13:21:18.584169",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 673,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "test- ignore me.",
+    "weekday_id": "1",
+    "created_at": "2016-03-22 13:49:09.805247",
+    "updated_at": "2016-03-22 14:01:09.722052",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 674,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2016-03-22 14:08:16.282724",
+    "updated_at": "2016-03-22 14:08:16.282724",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 675,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "5",
+    "created_at": "2016-03-22 14:08:16.282724",
+    "updated_at": "2016-03-22 14:09:44.987583",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 701,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #7",
+    "weekday_id": "4",
+    "created_at": "2016-09-17 09:16:10.487995",
+    "updated_at": "2016-09-17 09:16:10.487995",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 676,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "System Evaluation",
+    "weekday_id": "6",
+    "created_at": "2016-03-22 14:08:16.282724",
+    "updated_at": "2016-03-22 14:15:49.781044",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 677,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Cleaning",
+    "weekday_id": "2",
+    "created_at": "2016-03-24 09:40:13.399652",
+    "updated_at": "2016-03-24 09:40:13.399652",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 678,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Linux Open Questions",
+    "weekday_id": "3",
+    "created_at": "2016-03-25 16:52:23.468128",
+    "updated_at": "2016-03-25 16:52:23.468128",
+    "notes": "Learn the basics of Ubuntu Linux in this class that changes based on the needs and questions of the students.  Bring anything from basic questions to advanced projects. You may take this class as often as you would like.",
+    "week": "B"
+  }
+}, {
+  "pk": 679,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2016-03-30 13:08:32.860145",
+    "updated_at": "2016-03-30 13:08:32.860145",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 680,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Support",
+    "weekday_id": "2",
+    "created_at": "2016-03-31 17:45:31.07616",
+    "updated_at": "2016-03-31 17:47:28.429636",
+    "notes": "Only build staff and Amber should be scheduling volunteers into these special slots.",
+    "week": ""
+  }
+}, {
+  "pk": 681,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Support",
+    "weekday_id": "4",
+    "created_at": "2016-03-31 17:45:31.07616",
+    "updated_at": "2016-03-31 17:50:19.838555",
+    "notes": "Only build staff and Amber should be scheduling volunteers into these special slots.",
+    "week": ""
+  }
+}, {
+  "pk": 682,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Support",
+    "weekday_id": "5",
+    "created_at": "2016-03-31 17:45:31.07616",
+    "updated_at": "2016-03-31 17:51:01.945415",
+    "notes": "Only build staff and Amber should be scheduling volunteers into these special slots.",
+    "week": ""
+  }
+}, {
+  "pk": 683,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Support",
+    "weekday_id": "6",
+    "created_at": "2016-03-31 17:45:31.07616",
+    "updated_at": "2016-04-07 18:30:16.947653",
+    "notes": "Only build staff and Amber should be scheduling volunteers into these special slots.",
+    "week": ""
+  }
+}, {
+  "pk": 684,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #36",
+    "weekday_id": "5",
+    "created_at": "2016-04-13 14:33:13.566424",
+    "updated_at": "2016-04-13 14:33:13.566424",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 557,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-05-26 14:00:38.714592",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 689,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Anatomy of a Computer 102",
+    "weekday_id": "5",
+    "created_at": "2016-05-11 10:15:22.328369",
+    "updated_at": "2016-06-04 16:10:54.297293",
+    "notes": "Students will build on what they have learned in Anatomy of a Computer 101 by getting hands-on practice disassembling and triaging computers. This class is a prerequisite for the Build Program.",
+    "week": ""
+  }
+}, {
+  "pk": 691,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:22:04.096593",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 700,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginner Workshop",
+    "weekday_id": "2",
+    "created_at": "2016-09-10 11:52:35.469171",
+    "updated_at": "2016-09-10 11:52:35.469171",
+    "notes": "Workshop designed to introduce volunteers to the basics of laptop refurbishment. This workshop replaces 102 and has a 101 completion prerequisite.",
+    "week": "A"
+  }
+}, {
+  "pk": 688,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Anatomy of a Computer 102",
+    "weekday_id": "2",
+    "created_at": "2016-05-11 10:14:03.694758",
+    "updated_at": "2016-06-04 12:59:21.352883",
+    "notes": "Students will build on what they have learned in Anatomy of a Computer 101 by getting hands-on practice disassembling and triaging computers. This class is a prerequisite for the Build Program.",
+    "week": ""
+  }
+}, {
+  "pk": 690,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Anatomy of a Computer 102",
+    "weekday_id": "6",
+    "created_at": "2016-05-11 10:23:26.243085",
+    "updated_at": "2016-06-04 13:00:25.503504",
+    "notes": "Students will build on what they have learned in Anatomy of a Computer 101 by getting hands-on practice disassembling and triaging computers. This class is a prerequisite for the Build Program.",
+    "week": ""
+  }
+}, {
+  "pk": 692,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:22:28.599728",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 693,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptops",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:46:08.660278",
+    "updated_at": "2016-07-23 17:23:04.508958",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 662,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "6",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2016-07-23 17:29:37.030582",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 694,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2016-07-23 17:35:53.858534",
+    "updated_at": "2016-07-23 17:35:53.858534",
+    "notes": "Must have Build Instructor Approval",
+    "week": ""
+  }
+}, {
+  "pk": 695,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "5",
+    "created_at": "2016-07-23 17:39:21.708351",
+    "updated_at": "2016-07-23 17:39:21.708351",
+    "notes": "Must have build instructor approval",
+    "week": ""
+  }
+}, {
+  "pk": 699,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginner Workshop",
+    "weekday_id": "4",
+    "created_at": "2016-09-10 11:54:03.664628",
+    "updated_at": "2016-09-10 12:24:25.443092",
+    "notes": "Workshop designed to introduce volunteers to the basics of laptop refurbishment. This workshop replaces 102 and has a 101 completion prerequisite.",
+    "week": ""
+  }
+}, {
+  "pk": 686,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Anatomy of a Computer",
+    "weekday_id": "5",
+    "created_at": "2016-04-20 15:37:47.92723",
+    "updated_at": "2016-09-13 16:31:14.814135",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 704,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginner Workshop",
+    "weekday_id": "5",
+    "created_at": "2016-09-27 15:09:32.602087",
+    "updated_at": "2016-09-27 15:09:32.602087",
+    "notes": "Desktop Beginner Workshop. Designed for volunteers who have taken Anatomy of a computer but are beginners.",
+    "week": "B"
+  }
+}, {
+  "pk": 685,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Anatomy of a Computer",
+    "weekday_id": "2",
+    "created_at": "2016-04-20 15:34:44.918438",
+    "updated_at": "2016-09-13 16:32:27.740608",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 702,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "DIY CNC Mill",
+    "weekday_id": "2",
+    "created_at": "2011-02-26 16:25:24.983337",
+    "updated_at": "2016-09-23 11:41:22.661988",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 597,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2016-10-20 09:57:06.356701",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 660,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "5",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2016-10-20 09:57:44.707645",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 705,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Support",
+    "weekday_id": "4",
+    "created_at": "2016-03-31 17:45:31.07616",
+    "updated_at": "2016-03-31 17:50:19.838555",
+    "notes": "Only build staff and Amber should be scheduling volunteers into these special slots.",
+    "week": ""
+  }
+}, {
+  "pk": 706,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptop BootCamp",
+    "weekday_id": "6",
+    "created_at": "2016-10-21 14:32:06.293079",
+    "updated_at": "2016-10-21 14:32:06.293079",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 707,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginner Workshop",
+    "weekday_id": "6",
+    "created_at": "2016-10-22 12:37:49.82019",
+    "updated_at": "2016-10-22 12:37:49.82019",
+    "notes": "Workshop to introduce students who have taken Anatomy to the hardware and process of refurbishing Desktops",
+    "week": "A"
+  }
+}, {
+  "pk": 708,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginner Workshop",
+    "weekday_id": "6",
+    "created_at": "2016-10-22 12:40:07.993394",
+    "updated_at": "2016-10-22 12:40:07.993394",
+    "notes": "Workshop for volunteers who have taken Anatomy that is geared toward introducing volunteers to the hardware of desktops and how to refurbish them",
+    "week": "A"
+  }
+}, {
+  "pk": 709,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac Build",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:50:52.575773",
+    "updated_at": "2016-11-02 17:33:40.52466",
+    "notes": "Need OK From Build Instructor",
+    "week": ""
+  }
+}, {
+  "pk": 697,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Linux Open Questions",
+    "weekday_id": "3",
+    "created_at": "2011-02-26 16:25:24.983337",
+    "updated_at": "2016-11-03 15:35:18.62886",
+    "notes": "Drop-ins welcome",
+    "week": "A"
+  }
+}, {
+  "pk": 715,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Programming with Python",
+    "weekday_id": "3",
+    "created_at": "2017-04-19 17:24:59.376071",
+    "updated_at": "2017-04-19 17:24:59.376071",
+    "notes": "Pre-reqs: Keyboard and mouse skills",
+    "week": "B"
+  }
+}, {
+  "pk": 696,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Command Line",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:25:24.983337",
+    "updated_at": "2017-05-06 15:17:30.66719",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 703,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "3",
+    "created_at": "2016-09-27 15:09:32.602087",
+    "updated_at": "2017-07-27 15:00:34.400891",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 687,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Anatomy of a Computer",
+    "weekday_id": "6",
+    "created_at": "2016-04-20 15:39:02.475375",
+    "updated_at": "2017-08-15 10:55:04.505453",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 714,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "6",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 15:05:17.0294",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 713,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "5",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 15:03:25.745363",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 711,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "3",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 14:58:04.35146",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 589,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sorting",
+    "weekday_id": "2",
+    "created_at": "2013-04-27 13:49:35.576458",
+    "updated_at": "2017-10-20 14:57:09.466392",
+    "notes": "SORTING and RUNNER:  Standing tasks only. First shift must begin at 10:00am or at 2:00pm, and be at least 2 hours+.\r\n\r\nRUNNER: Must have been in Sorting at least once before signing up. Regular lifting up to 50lbs.",
+    "week": ""
+  }
+}, {
+  "pk": 712,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "4",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 15:07:29.58894",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 698,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Beginner Workshop",
+    "weekday_id": "2",
+    "created_at": "2016-09-10 11:52:35.469171",
+    "updated_at": "2017-11-07 15:07:59.459953",
+    "notes": "Workshop designed to introduce volunteers to the basics of laptop refurbishment. This workshop has an Anatomy class completion prerequisite. If a volunteer is 10 minutes or more late, they will be asked to reschedule.",
+    "week": ""
+  }
+}, {
+  "pk": 672,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-12-12 11:14:38.358549",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 717,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Graphic Design with GIMP",
+    "weekday_id": "4",
+    "created_at": "2017-05-19 11:50:10.184912",
+    "updated_at": "2017-05-19 11:50:10.184912",
+    "notes": "",
+    "week": "B"
+  }
+}, {
+  "pk": 746,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "2",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-12-12 11:15:44.39326",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 720,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #12",
+    "weekday_id": "2",
+    "created_at": "2017-07-11 18:52:32.546721",
+    "updated_at": "2017-07-11 18:52:32.546721",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 445,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "4",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-08-15 14:11:52.409543",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 722,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Python Open Questions",
+    "weekday_id": "3",
+    "created_at": "2017-09-05 13:08:15.072872",
+    "updated_at": "2017-09-05 13:08:15.072872",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 716,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Web Development 1",
+    "weekday_id": "6",
+    "created_at": "2017-05-19 11:43:48.596998",
+    "updated_at": "2017-09-05 13:13:55.40832",
+    "notes": "Prereq: Basic keyboard and mouse skills",
+    "week": ""
+  }
+}, {
+  "pk": 718,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Intermediate Privacy & Safety",
+    "weekday_id": "6",
+    "created_at": "2017-05-20 11:18:59.709599",
+    "updated_at": "2017-09-05 13:14:21.50404",
+    "notes": "Monthly workshop on privacy topics including IP addresses, Mac addresses, VPN, private communication tools, etc",
+    "week": ""
+  }
+}, {
+  "pk": 719,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Advanced Privacy & Security",
+    "weekday_id": "6",
+    "created_at": "2017-05-20 11:18:59.709599",
+    "updated_at": "2017-09-05 13:14:36.758028",
+    "notes": "Rotating monthly advanced topics. Include: VMware, online anonymity, firewalls, wifi security, etc.",
+    "week": ""
+  }
+}, {
+  "pk": 723,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Linux Open Questions",
+    "weekday_id": "6",
+    "created_at": "2017-09-05 13:22:20.93255",
+    "updated_at": "2017-09-05 13:23:31.257813",
+    "notes": "Drop-in session.",
+    "week": ""
+  }
+}, {
+  "pk": 710,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Creative Media",
+    "weekday_id": "6",
+    "created_at": "2017-03-01 15:45:50.603182",
+    "updated_at": "2017-09-16 17:56:48.130772",
+    "notes": "Creative Media classes every 2nd and 4th Saturday of the month. Exact class topic will be set one month in advance.",
+    "week": ""
+  }
+}, {
+  "pk": 725,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Mac",
+    "weekday_id": "6",
+    "created_at": "2017-09-21 10:21:38.270889",
+    "updated_at": "2017-09-21 10:21:38.270889",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 724,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptop Support",
+    "weekday_id": "6",
+    "created_at": "2017-09-21 10:07:54.124385",
+    "updated_at": "2017-09-21 10:23:07.0806",
+    "notes": "This shift is only for pre-approved Laptops Instructors",
+    "week": ""
+  }
+}, {
+  "pk": 727,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "3",
+    "created_at": "2017-10-03 16:45:17.308227",
+    "updated_at": "2017-10-03 17:36:27.249626",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 729,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "5",
+    "created_at": "2017-10-03 16:45:17.308227",
+    "updated_at": "2017-10-03 17:36:27.249626",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 730,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "6",
+    "created_at": "2017-10-03 16:45:17.308227",
+    "updated_at": "2017-10-03 17:36:27.249626",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 731,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-10-03 18:10:55.397006",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 732,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Build Workshop",
+    "weekday_id": "3",
+    "created_at": "2011-02-23 20:40:57.631663",
+    "updated_at": "2017-10-03 18:11:45.902239",
+    "notes": "Qualified builders only",
+    "week": ""
+  }
+}, {
+  "pk": 728,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "4",
+    "created_at": "2017-10-03 16:45:17.308227",
+    "updated_at": "2017-10-06 10:14:40.705982",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 733,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2015-07-14 10:13:30.930392",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 735,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "6",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2015-07-14 10:13:30.930392",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 736,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "2",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2015-07-14 10:13:30.930392",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 738,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "3",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2015-07-14 10:13:30.930392",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 739,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "",
+    "weekday_id": "4",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2015-07-14 10:13:30.930392",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 737,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "A/V Intern",
+    "weekday_id": "2",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2017-10-06 11:52:06.115648",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 734,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "A/V Intern",
+    "weekday_id": "5",
+    "created_at": "2015-07-14 10:13:30.930392",
+    "updated_at": "2017-10-06 11:52:24.441879",
+    "notes": "",
+    "week": "A"
+  }
+}, {
+  "pk": 726,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "2",
+    "created_at": "2017-10-03 16:45:17.308227",
+    "updated_at": "2017-10-18 14:11:42.8566",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 740,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "2",
+    "created_at": "2017-10-03 16:45:17.308227",
+    "updated_at": "2017-10-18 14:47:28.623185",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 741,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "2",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 14:48:09.383477",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 743,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "2",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 14:52:50.241061",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 742,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "BETA Intern",
+    "weekday_id": "2",
+    "created_at": "2017-03-03 13:09:23.393266",
+    "updated_at": "2017-10-18 14:56:37.054562",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 590,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Sorting",
+    "weekday_id": "3",
+    "created_at": "2013-04-27 13:49:35.576458",
+    "updated_at": "2017-10-20 14:58:10.205141",
+    "notes": "SORTING and RUNNER: First shift must begin at 10:00am or at 2:00pm, and be at least 2 hours+. Standing tasks only. \r\n\r\nRUNNER: Must have been in Sorting at least once before signing up. Regular lifting up to 50lbs.",
+    "week": ""
+  }
+}, {
+  "pk": 744,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #26",
+    "weekday_id": "2",
+    "created_at": "2011-10-22 16:35:55.64884",
+    "updated_at": "2012-10-04 08:56:24.375218",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 745,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Roster #12",
+    "weekday_id": "5",
+    "created_at": "2017-10-27 17:52:26.722674",
+    "updated_at": "2017-10-27 17:52:26.722674",
+    "notes": "",
+    "week": ""
+  }
+}, {
+  "pk": 721,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Laptop Bootcamp",
+    "weekday_id": "6",
+    "created_at": "2017-08-15 14:15:46.41524",
+    "updated_at": "2017-11-07 15:08:27.000168",
+    "notes": "Anatomy of a Computer Required. Students should plan to stay for the whole bootcamp. If a volunteer is 10 minutes or more late, they will be asked to reschedule.",
+    "week": ""
+  }
+}, {
+  "pk": 532,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Getting Started",
+    "weekday_id": "3",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2017-11-10 17:46:17.342406",
+    "notes": "Those with 24 hours who are earning computers must be signed up for the 2.5-hour \"Getting Started\" slot. \r\n\r\nThose who simply want to learn about Linux (with their own laptop or borrowing ours) must be signed up for the 2-hour \"Intro to Linux Mint.\"",
+    "week": "A"
+  }
+}, {
+  "pk": 476,
+  "model": "scheduling.VolunteerDefaultEvent",
+  "fields": {
+    "description": "Getting Started",
+    "weekday_id": "6",
+    "created_at": "2011-02-26 16:15:25.288879",
+    "updated_at": "2017-11-10 17:46:33.997575",
+    "notes": "Those with 24 hours who are earning computers must be signed up for the 2.5-hour \"Getting Started\" slot. \r\n\r\nThose who simply want to learn about Linux (with their own laptop or borrowing ours) must be signed up for the 2-hour \"Intro to Linux Mint.\"",
+    "week": ""
+  }
+}]
