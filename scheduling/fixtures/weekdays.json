@@ -1,0 +1,93 @@
+[
+  {
+    "pk": 1,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Monday",
+      "short_name": "Mon",
+      "is_open": "f",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Friday",
+      "short_name": "Fri",
+      "is_open": "t",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  },
+  {
+    "pk": 0,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Sunday",
+      "short_name": "Sun",
+      "is_open": "f",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Tuesday",
+      "short_name": "Tue",
+      "is_open": "t",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Thursday",
+      "short_name": "Thu",
+      "is_open": "t",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Saturday",
+      "short_name": "Sat",
+      "is_open": "t",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "scheduling.Weekday",
+    "fields": {
+      "name": "Wednesday",
+      "short_name": "Wed",
+      "is_open": "t",
+      "start_time": "08:00:00",
+      "end_time": "20:00:00",
+      "open_time": "10:00:00",
+      "close_time": "18:00:00"
+    }
+  }
+]
