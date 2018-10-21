@@ -1,36 +1,29 @@
 var fs = require('fs');
-var parsed_json = require('./converted_volunteer_default_shifts.json');
+var parsed_json = require(process.argv[3]);
 
 var details = parsed_json.map((row) => {
-  var dingo = {}
-  dingo.pk = parseInt(row.id)
-  dingo.model = "scheduling.VolunteerDefaultShift"
-  dingo.fields = {}
+  var obj = {}
+  obj.pk = parseInt(row.id)
+  obj.model = process.argv[2]
+  obj.fields = {}
   let keys = Object.keys(row)
 
-  // drop id
+  // if key ends in _id then parseInt
+  // and set key to value
   keys.filter(key => key !== 'id')
     .map((key) => {
-      dingo.fields[key] = row[key]
+      const regex = /_id$/g;
+      if(key.match(regex)) {
+        obj.fields[key] = parseInt(row[key])
+      } else {
+        obj.fields[key] = row[key]
+      }
     })
-
-  return dingo
+  return obj
 })
-console.log(details)
 
 const str = JSON.stringify(details)
-fs.writeFile('volunteer_default_shifts.json', str, 'utf8', ()=> {});
+const output = process.argv[2].split(".")[0] + '.json';
+fs.writeFile(output, str, 'utf8', ()=> {});
 
-// 1. convert csv to json then
-  // csvtojson volunteer_default_shifts.csv > converted_volunteer_default_shifts.json
-// 2. use custom js script to take parsed json grab correct fields and change shape
-  // node convert_json_to_fixture_volunteer_default_shifts.js
-// 3. beautify json in editor to verify json shape
-// 4.
-  // mv converted_volunteer_default_shifts.json ~/code/freegeek/free-geek/scheduling/fixtures/
-//
-
-
-
-
-// TODO: get extender cable back for laptop
+// node convert_json_to_fixture.js "scheduling.VolunteerDefaultShift" "./data.json"
